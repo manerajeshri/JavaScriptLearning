@@ -14,3 +14,15 @@ function someName(param1,param2) {
 }
 var b=someName('Me','You')
 console.log(b);
+
+// charCodeAt() returns unicode value
+var myString = "Rajeshri";
+console.log(`unicode value is ${myString.charCodeAt(0)}`);
+
+
+// valueOf() returns the primitive value of a string:</p>
+
+ text = "Hello World!";
+ console.log(`"Hello World!"`);
+ console.log(` typeof returns type of data : ${typeof(text)}`); 
+ console.log(`value of returns the value : ${text.valueOf()}`);
