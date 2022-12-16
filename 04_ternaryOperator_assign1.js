@@ -18,7 +18,7 @@ console.log(``);
 console.log(`2] Finding Even or odd Number`);
 
 var isEvenOdd = function (num) {
-    var resultIsEvenOdd = (num%2 ? "ODD Number": "EVEN Number");
+    var resultIsEvenOdd = (num%2==0 ? "EVEN Number": "ODD Number");
     return resultIsEvenOdd;
 }
 
