@@ -40,26 +40,50 @@
 // console.log(`Result: ${evenOrOdd(45)}`)
 // console.log(`Result: ${evenOrOdd(40)}`)
 
-var evenOrOdd = function(val1,val2) {
+// var evenOrOdd = function(val1,val2) {
 
-  if (val1==val2) {
-    return "true";
-  }
-  if (val1!==val2) {
-    return "false";
-  }
+//   if (val1==val2) {
+//     return "true";
+//   }
+//   if (val1!==val2) {
+//     return "false";
+//   }
 
+// }
+// console.log(`Result: ${evenOrOdd(0,' ')}`)
+// console.log(`Result: ${evenOrOdd(0,'0')}`)
+// console.log(`Result: ${evenOrOdd(0,false)}`)
+// console.log(`Result: ${evenOrOdd(null,undefined)}`)
+// console.log(`Result: ${evenOrOdd(1,[1])}`)
+// console.log(`Result: ${evenOrOdd(1,true)}`)
+// console.log(`Result: ${evenOrOdd(1,'1')}`)
+
+// =============================================================================anuja
+
+var ageGrade=function(age)
+{
+    
+      if (age>0 && age<18) 
+      {
+        console.log(`${age}: Age is not eligible for voting  `);
+      }
+      if (age>=18 && age<120) 
+      {
+        console.log(`${age}: Age is eligible for voting  `);
+      }
+      if (age<=0 || age>120 ) {
+        console.log(`${age}: " This is Invalid data"`);
+        
+      }
+     
 }
-console.log(`Result: ${evenOrOdd(0,' ')}`)
-console.log(`Result: ${evenOrOdd(0,'0')}`)
-console.log(`Result: ${evenOrOdd(0,false)}`)
-console.log(`Result: ${evenOrOdd(null,undefined)}`)
-console.log(`Result: ${evenOrOdd(1,[1])}`)
-console.log(`Result: ${evenOrOdd(1,true)}`)
-console.log(`Result: ${evenOrOdd(1,'1')}`)
-
-
-
+ageGrade(45);
+ageGrade(17);
+ageGrade(8);
+ageGrade(20);
+ageGrade(-10);
+ageGrade(200);
+ageGrade(0);
 
 
 
