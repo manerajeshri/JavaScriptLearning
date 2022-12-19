@@ -21,7 +21,7 @@ voteEligibility(-10);
 voteEligibility(200);
 voteEligibility(0);
 
-// ============================================== 2nd=================
+// ============================================== 2nd Grade System=================
 
 console.log(`\n2] Grade System :\n`);
 
