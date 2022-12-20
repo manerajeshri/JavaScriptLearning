@@ -20,8 +20,8 @@ var givenString = function () {
   var givenStringIs = "I am Angular Developer";
   console.log(`2] The given string is: ${givenStringIs}`);
   console.log(`The string length is : ${givenStringIs.length}`);
-  var stringslice = givenStringIs.split(" ");
-  console.log(`Total no of words    : ${stringslice.length}`);
+  var stringsplit = givenStringIs.split(" ");
+  console.log(`Total no of words    : ${stringsplit.length}`);
   console.log(``);
   console.log(`2.1] String length / Total no of words : ${givenStringIs.length / stringslice.length}`);
   console.log(``);
