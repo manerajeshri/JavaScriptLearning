@@ -32,7 +32,8 @@ console.log(`3] Finding word length is Even or odd`);
 
 var lengthEvenOdd = function (string) {
 
-    var resultlengthEvenOdd = ( (string.length) % 2 ? " ODD ": " EVEN ");
+    // var resultlengthEvenOdd = ( (string.length) % 2 ? " ODD ": " EVEN "); // working 
+    var resultlengthEvenOdd = ( ((string.length)%2==0) ? " EVEN ": " ODD ");
     return resultlengthEvenOdd;
 
 }
