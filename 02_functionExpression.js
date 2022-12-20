@@ -1,4 +1,4 @@
-// we can store a function as value in JS
+// we can store a function as value in variable in JS
 var addition=function (n1,n2) {
     console.log(n1+n2);
 }
