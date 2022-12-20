@@ -17,6 +17,11 @@ function stringTemplateAssig() {
   // let result = text1.concat(" ", text2, " ", text3);
   console.log(`2.2] Using Concat and string template : `);
   // console.log(`My Hobbies are : ${hobby1}${hobby2}${hobby3}`);
-  console.log(`"My Hobbies are ${hobby1}${hobby2}${hobby3}"`);
+  console.log(`"My Hobbies are : ${hobby1} ${hobby2} ${hobby3}"`);
+
+  // using concat
+var resultConcat = hobby1 .concat( hobby2 , hobby3)
+console.log(`Result using Concat : ${resultConcat}`);
+
 }
 stringTemplateAssig();
