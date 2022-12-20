@@ -5,5 +5,5 @@ console.log(myName);
 // x="123"
 // console.log(x);
 
-var myName1="R P Mane";
+var myName1="R P Mane";// variable declaration and initialization
 console.log(myName1);
