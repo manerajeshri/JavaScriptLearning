@@ -60,7 +60,7 @@ console.log("Slice () with  negative start index and end index :",greet.slice(-7
 // Spliting string
 var studentList="abhi, Aaru,raj,amol,dinu";
 console.log(studentList);
-var stdtSplit=studentList.split(",");
+var stdtSplit=studentList.split(","); // stringName.split("Seperator")
 console.log("student list after spliting by character i.e. comma :",stdtSplit);
 console.log("total no of student:", stdtSplit.length);
 
@@ -73,7 +73,7 @@ console.log("Total words in string : ",totalNoOfWord.length);
 // using back tick
 console.log(`I love "India"`);
 
-// ${ }
+// ${ } variable substitute
 
 var firstName="Raj";
 var lastName="Mane";
