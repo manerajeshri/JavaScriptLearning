@@ -83,6 +83,7 @@ ageGrade(8);
 ageGrade(20);
 ageGrade(-10);
 ageGrade(200);
+// console.clear();// clear console
 ageGrade(0);
 
 
