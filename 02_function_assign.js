@@ -29,13 +29,14 @@ swapValuesDude( 1000,2000)
 console.log(' ');console.log('4]');
 
 function addThreeValues(val1,val2,val3) {
-    // var val= val1 + val2 + val3;
-     console.log(val1 ,'+', val2,'+', val3);
+    console.log(val1 ,'+', val2,'+', val3);
     return val1 + val2 + val3;
 }
 
-var output=addThreeValues(10.23,600,40);
-console.log('Addition is : ',output);
+// var output=addThreeValues(10.23,600,40);
+// console.log('Addition is : ',output);
+console.log(`\nAddition is = ${addThreeValues(10.23,600,40)}`);
+
 console.log(' ');
 var output=addThreeValues( 'Hello','Good','Morning' );
 console.log('Addition is : ',output);
