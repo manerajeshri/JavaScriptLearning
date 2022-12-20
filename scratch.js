@@ -60,36 +60,44 @@
 
 // =============================================================================anuja
 
-var ageGrade=function(age)
-{
+// var ageGrade=function(age)
+// {
     
-      if (age>0 && age<18) 
-      {
-        console.log(`${age}: Age is not eligible for voting  `);
-      }
-      if (age>=18 && age<120) 
-      {
-        console.log(`${age}: Age is eligible for voting  `);
-      }
-      if (age<=0 || age>120 ) {
-        console.log(`${age}: " This is Invalid data"`);
+//       if (age>0 && age<18) 
+//       {
+//         console.log(`${age}: Age is not eligible for voting  `);
+//       }
+//       if (age>=18 && age<120) 
+//       {
+//         console.log(`${age}: Age is eligible for voting  `);
+//       }
+//       if (age<=0 || age>120 ) {
+//         console.log(`${age}: " This is Invalid data"`);
         
-      }
+//       }
      
-}
-ageGrade(45);
-ageGrade(17);
-ageGrade(8);
-ageGrade(20);
-ageGrade(-10);
-ageGrade(200);
-// console.clear();// clear console
-ageGrade(0);
+// }
+// ageGrade(45);
+// ageGrade(17);
+// ageGrade(8);
+// ageGrade(20);
+// ageGrade(-10);
+// ageGrade(200);
+// // console.clear();// clear console
+// ageGrade(0);
 
 
+//adding father name using concat
+var firstName="Rajeshri ";
+var lastName="Mane";
+var result = firstName.concat("Prakash ",lastName);
+console.log('concatination using .concat is :',result);
 
-
-
+//adding father name 
+var nameString = "Monika Thorat";
+var monika = nameString.slice(0,6);//Monika
+var thorat = nameString.slice(7,13);//Thorat
+console.log(`Full name is : ${monika} Haridas ${thorat}`);
 
 
 
