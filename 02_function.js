@@ -1,10 +1,10 @@
+// 1] function with No arguments No return
 function show() {
   // task to perform
   console.log("RIT Islampur");
 }
-
-show();
-
+show(); // calling / invoke function
+// 2] function with arguments No return
 function swapvalues(value1, value2) {
   console.log("Before", value1, value2);
   var temp = value1;
