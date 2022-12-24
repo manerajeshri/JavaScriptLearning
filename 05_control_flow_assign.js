@@ -40,7 +40,7 @@ function oddPositionedChars(string) {
    
     for (let index = 0; index <= resultSplitJoin.length-1; index++) {
         if ((index%2)!== 0) {
-            console.log(`${resultSplitJoin.charAt(index)}`);
+            console.log(`${resultSplitJoin.charAt(index)}`);//character at output
         }        
     }
 }
