@@ -1,8 +1,6 @@
 console.log(`factorial of number`);
-
 function factorialNumber(num) {
     // console.log(`Given number is : ${num}`);
-
     var fact = 1;
     for (var index = num; index >= 1; index--) {
         //     5
