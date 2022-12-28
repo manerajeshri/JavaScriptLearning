@@ -1,0 +1,26 @@
+console.log(`======== join() ==========`);
+var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
+let joinResult = arrayOfNum.join(" | ");
+console.log(joinResult);
+console.log(typeof joinResult);
+
+var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
+let arrayOfNames = ["A","B","C","D","E"];
+let arrayOfCities = ["Satara","Pune","Pune"]
+const concatArray = arrayOfNum.concat(arrayOfNames,arrayOfCities);
+console.log(concatArray);//(15) [4, 5, 6, 8, 9, 33, 66, 'A', 'B', 'C', 'D', 'E', 'Satara', 'Pune', 'Pune']
+console.log(typeof concatArray);// object
+
+
+console.log(`Resize an Array`);
+var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
+console.log(arrayOfNum.length);
+arrayOfNum.length = 5;
+console.log(arrayOfNum);
+console.log(arrayOfNum.length);
+
+var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
+console.log(arrayOfNum.length);
+arrayOfNum.length = 10;
+console.log(arrayOfNum);
+console.log(arrayOfNum.length);
