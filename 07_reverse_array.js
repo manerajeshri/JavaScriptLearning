@@ -23,7 +23,7 @@ for (let index = 0; index < reversedArray.length; index++) {
         
     }   
     else {
-        oddPosition = oddPosition +" " + reversedArray[index] // concating o/p // 2 8 6
+        oddPosition = oddPosition +" " + reversedArray[index] // concating o/p // 3 7 4
     }
     // console.log(evenPosition);
 }
