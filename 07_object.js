@@ -122,8 +122,29 @@ const billgates = {
     height: 6,
     weight: 70,
     age: 23,
-    name: "Billgates"
+    name: "Billgates",
+    company : "microsoft",
+    valuation : "130 B$"
+
 }
 console.log(Object.entries(billgates));
 console.log(Object.keys(billgates));
 console.log(Object.values(billgates));
+
+for (const key in billgates) {
+    if (Object.hasOwnProperty.call(billgates, key)) {
+        const element = billgates[key];
+        // console.log(element); // acess only value
+        console.log(key,element); // acess key and value
+    }
+}
+
+console.log(`=================== in operator ==============`);
+let isAvailable = "height" in billgates;
+console.log(isAvailable);//true
+if (isAvailable) {// if loop execute when condition is true
+    delete billgates.height;
+    console.log(`"height" property is deleted successfully`);
+}else{
+    console.log(`"height" property is Not deleted successfully`);
+}
