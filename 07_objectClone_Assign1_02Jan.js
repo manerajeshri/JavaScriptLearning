@@ -54,14 +54,12 @@ for (const key in employee_info.address.locality) {
     if (Object.hasOwnProperty.call(employee_info.address.locality, key)) {
         const element = employee_info.address.locality[key];
         console.log(key,element);
-        
     }
 }
 for (const key in employee_info.address) {
     if (Object.hasOwnProperty.call(employee_info.address, key)) {
         const element = employee_info.address[key];
-        console.log(key,element);
-        
+        console.log(key,element); 
     }
 }
 
