@@ -59,6 +59,8 @@ class Employee {
   mapOfEmployees.set(22, empDhir);
   mapOfEmployees.set(33, empSachin);
   mapOfEmployees.set(44, empGayatri);
+  console.log(`==============================================`);
+  console.log(empSup);
 
  const keyOfMapEmployee = mapOfEmployees.keys();
  console.log(keyOfMapEmployee);
