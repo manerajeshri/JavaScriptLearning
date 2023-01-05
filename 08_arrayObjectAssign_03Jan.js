@@ -36,7 +36,7 @@ console.log(`\nD. from array finding Kotak Bank using for of loop`);
 
 for (const iterator of allBankArray) {
     if (iterator.bankName == " KOTAK Bank ") {
-        console.log(iterator);        
+        console.log(`Bank Name: ${iterator.bankName} Location: ${iterator.location}`);        
     }
 }
 console.log(`\nE. Log details using for loop`);
