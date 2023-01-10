@@ -11,7 +11,8 @@ class Bank {
     }
 }
 
-const axis_bank = new Bank (" AXIS Bank","Pune",0009 ,"AXIS000011","6%"); // 0000 --> 0 01-->1  11 --> 9 , 22 --> 18 , 33--> 27....0077 -->63   0088 --> 88 , 99 --> 99
+const axis_bank = new Bank (" AXIS Bank","Pune",1000011 ,"AXIS000011","6%"); 
+// 0000 --> 0 01-->1  11 --> 9 , 22 --> 18 , 33--> 27....0077 -->63   0088 --> 88 , 99 --> 99
 const sbi_Bank = new Bank (" SBI Bank"," Pune",200022," SBI00009","7% "); 
 // if prefixed by 00 then
 // Bank {bankName: ' SBI Bank', location: ' Pune', accountNo: 18, ifsc: ' SBI00009', interestRate: '7% '}
