@@ -15,18 +15,36 @@ anilHomework(11,sunilHomework);
 
 // callback example 2
 
-function add(n1,n2) {
+function ad(n1,n2) {
     console.log(`\nAddition is : ${n1+n2}`);
 }
-function mul(n1,n2) {
+function ml(n1,n2) {
     console.log(`Multiplication is : ${n1*n2}`);
 }
 
-function addMul() {
+function adMl() {
    console.log(`Callback==============================`);
 }
+adMl(ad(1,3),ml(5,6))
+// adMl()
 
-addMul(add(1,3),mul(5,6))
+console.log("Callback with arg functions");
+let add = function (n1, n2){
+    console.log(n1+n2);
+}
+let multiply = function (n1, n2){
+    console.log(n1*n2);
+}
+
+function operation(callbackAdd, callbackMultiply) {
+    console.log('operation');
+    callbackAdd(5, 5);
+    callbackMultiply(2, 2);
+} 
+operation(add, multiply);
+
+
+
 
 function show() {
     console.log("\nHI setTimeout : inserts delay");
