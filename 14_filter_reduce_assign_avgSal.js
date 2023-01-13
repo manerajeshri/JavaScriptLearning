@@ -22,18 +22,18 @@ arrayOfEmployee = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,e
 console.log(`=============================================================================`);
 console.log(`5) Find average salary of employees for all the department`);
 const sal = arrayOfEmployee.reduce( (runningTotal,value) => {
-    console.log(value.emp_Salary);
-    return runningTotal+ value.emp_Salary;
+    console.log(value.emp_salary);
+    return runningTotal+ value.emp_salary;
  },0 );
 console.log(`salary of employees for all the department is INR ${sal/arrayOfEmployee.length}`);
 
 console.log(`------------------------------------------------------------------------------------`);
 console.log(`6) Find the average salary of IT department`);
 const arrayIT = arrayOfEmployee.filter( (currentValue) => {
-    return currentValue.emp_Dept == "IT";
+    return currentValue.emp_dept == "IT";
 } );
 const avgIT = arrayIT.reduce( (runningTotal, value) => {
-        return runningTotal + value.emp_Salary;
+        return runningTotal + value.emp_salary;
 },0 );
 console.log(`The average salary of employee in IT dept is: INR ${avgIT/arrayIT.length}`);
 console.log(`------------------------------------------------------------------------------------`);
