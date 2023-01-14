@@ -13,3 +13,61 @@ Prime numbers are the natural numbers greater than 1 with exactly two factors, i
 */
 
 console.log(`Find the given number is prime or not :`);
+
+let primeNo = function (n) {
+    if (n==2) {
+        console.log(`${n} is Prime No`);
+    } else if (n>2 && n%2!==0 && n%n==0  ){
+        console.log(`${n} is Prime No`);
+    } else {
+        console.log(`${n} is Non Prime`);
+    }
+}
+
+primeNo(1); primeNo(2);primeNo(3);primeNo(4);primeNo(5);primeNo(6);primeNo(7);primeNo(8);primeNo(9);primeNo(10);
+
+
+
+
+
+
+
+
+
+
+// monika
+
+// let number = 6;
+//    let isPrime = true;
+
+//     for (let i = 2; i < number; i++) {
+//         if (number % i == 0) {
+//             isPrime = false;
+//             break;
+//         }
+//     }
+//     if (isPrime) {
+//         console.log(`${number} is a prime number`);
+//     } else {
+//         console.log(`${number} is a not prime number`);
+//     }
+
+// shubhangi
+
+// function primenum(n){
+//     for (let index = 2; index < n; index++) {
+//         if (n % index == 0) {
+//             console.log(`Given number ${n} Not prime number`);
+//             break;
+//         }
+//         else{
+//             console.log(`Given number ${n} is prime number`);
+//         }    
+//     }
+    
+// }
+// primenum(4);
+// console.log(`**********`);
+// primenum(2);
+// console.log(`**********`);
+// primenum(7);
