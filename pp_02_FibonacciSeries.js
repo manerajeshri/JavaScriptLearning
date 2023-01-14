@@ -10,4 +10,4 @@ For n = 9 Output:34
 
 */
 
-console.log(`Fibonacci Series till 7th occurance :`);
+console.log(`Fibonacci Series till 7th occurance :`); 
