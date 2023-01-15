@@ -58,3 +58,7 @@ const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
             }
 
     } )
+
+    console.log(arrayOfNumbers.entries());
+
+    console.log(arrayOfNumbers.);
