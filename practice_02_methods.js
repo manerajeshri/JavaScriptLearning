@@ -31,12 +31,30 @@ arrayOfNumbers.map((value)=> {
 
 console.log(arrayOfNumbers);
 
-arrayOfNumbers.map( (value,index, array )=> {
-console.log(value,index, array);
+const ar = arrayOfNumbers.map( (value,index, array )=> {
+// console.log(value,index, array);
+ return value*0
 })
-
+console.log(ar);
+// .method ( ): Calls a defined callback function on each element of an array, and returns an array that contains the results.
 const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
-    return value*2
+    if (index>5) {
+        return value*2 // return gives  output in array
+    }
+    
     })
 
     console.log(returnedArray);
+
+
+    //.filter() : Returns the elements of an array that meet the condition specified in a callback function.
+    arrayOfNumbers.filter( (val,ind,arr)=> {
+            // console.log(val,ind,arr);
+            // console.log(val*0);// log output one by one
+            if (ind>5) {
+                console.log(val*2);
+                return val*2 // return gives  output in array
+                
+            }
+
+    } )
