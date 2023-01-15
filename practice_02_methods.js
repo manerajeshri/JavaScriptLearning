@@ -22,3 +22,21 @@ console.log(arrayOfNumbers.keys());
 arrayOfNumbers.keys()
 
 console.log(arrayOfNumbers.lastIndexOf(2)); // Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
+
+console.log(arrayOfNumbers.length);
+arrayOfNumbers.map((value)=> {
+    console.log("**",value*3)
+
+})
+
+console.log(arrayOfNumbers);
+
+arrayOfNumbers.map( (value,index, array )=> {
+console.log(value,index, array);
+})
+
+const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
+    return value*2
+    })
+
+    console.log(returnedArray);
