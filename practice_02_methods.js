@@ -99,12 +99,6 @@ const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
     arrayOfNumbers.reverse()
     console.log(arrayOfNumbers);
 
-    // Returns a copy of a section of an array
-    const arrayNum = [ 1,2,3,4,5,6,7,8,9]
-    const resultSlice = arrayNum.slice(1,5);
-    console.log(resultSlice); 
-
-
     console.log(" befor sorting ",arrayOfNumbers);
      arrayOfNumbers.sort( (a,b )=> {
        return a>b ? 1:-1
@@ -118,3 +112,21 @@ const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
     })
     //  } ).reverse();
      console.log("decending order",arrayOfNumbers);
+
+
+
+    // Returns a copy of a section of an array
+    // don't alter original array
+    const arrayNum = [ 1,2,3,4,5,6,7,8,9]
+    const resultSlice = arrayNum.slice(1,5);
+    console.log("original",arrayNum);
+    console.log("after slice",resultSlice); 
+    console.log("original remains same",arrayNum);
+
+
+    // Removes elements from an array and, 
+    //if necessary, inserts new elements in their place, returning the deleted elements
+    console.log("original",arrayNum); 
+    const resultSplice = arrayNum.splice(2,0,88)
+    console.log("after splice",resultSplice); 
+    console.log("original remains same",arrayNum);
