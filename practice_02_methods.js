@@ -98,3 +98,23 @@ const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
 
     arrayOfNumbers.reverse()
     console.log(arrayOfNumbers);
+
+    // Returns a copy of a section of an array
+    const arrayNum = [ 1,2,3,4,5,6,7,8,9]
+    const resultSlice = arrayNum.slice(1,5);
+    console.log(resultSlice); 
+
+
+    console.log(" befor sorting ",arrayOfNumbers);
+     arrayOfNumbers.sort( (a,b )=> {
+       return a>b ? 1:-1
+    } );
+    
+    console.log("ascending order",arrayOfNumbers);
+
+    arrayOfNumbers.sort( (a,b )=> {
+        // return a<b ? 1:-1
+        return a>b ? -1:1
+    })
+    //  } ).reverse();
+     console.log("decending order",arrayOfNumbers);
