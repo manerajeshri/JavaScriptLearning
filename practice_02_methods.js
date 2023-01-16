@@ -92,3 +92,9 @@ const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
 
     arrayOfNumbers.unshift(5656); // add element at start
     console.log(arrayOfNumbers); // (5) [5656, 2, -3, 4, 999]
+
+    arrayOfNumbers.toString();
+    console.log(arrayOfNumbers);
+
+    arrayOfNumbers.reverse()
+    console.log(arrayOfNumbers);
