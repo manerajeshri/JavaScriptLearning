@@ -1,6 +1,6 @@
 
 
-const arrayOfNumbers = [ 1,2,3,4,5,6,7,8,9,10,2];
+const arrayOfNumbers = [ 1,2,3,4,5];
 console.log(arrayOfNumbers);
 console.log(arrayOfNumbers.length);
 console.log(arrayOfNumbers.concat(11,12,13));
@@ -61,4 +61,20 @@ const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
 
     console.log(arrayOfNumbers.entries());
 
-    console.log(arrayOfNumbers.);
+    console.log(".forEach");
+    arrayOfNumbers.forEach( (currentValue )=>{
+        console.log(currentValue);
+    } );
+    console.log(".map");
+    arrayOfNumbers.map( (currentValue )=>{
+        console.log(currentValue);
+    } );
+     console.log(".filter");
+    arrayOfNumbers.filter( (currentValue )=>{
+        console.log(currentValue);
+    } );
+    console.log(".reduce");
+    const result =arrayOfNumbers.reduce( (currentValue , val)=>{
+        return currentValue + val;
+    } );
+    console.log(result);
