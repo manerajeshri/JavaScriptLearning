@@ -1,6 +1,6 @@
 
 
-const arrayOfNumbers = [ 1,2,3,4,5];
+const arrayOfNumbers = [ -1,2,-3,4,5];
 console.log(arrayOfNumbers);
 console.log(arrayOfNumbers.length);
 console.log(arrayOfNumbers.concat(11,12,13));
@@ -78,3 +78,17 @@ const returnedArray = arrayOfNumbers.map( (value,index, array )=> {
         return currentValue + val;
     } );
     console.log(result);
+
+//Removes the last element from an array and returns it.
+// If the array is empty, undefined is returned and the array is not modified.
+    arrayOfNumbers.pop(2,1);
+    console.log(arrayOfNumbers); // (4) [-1, 2, -3, 4]
+
+    arrayOfNumbers.push(999) // add element at end
+    console.log(arrayOfNumbers); //  (5) [-1, 2, -3, 4, 999]
+
+    arrayOfNumbers.shift();
+    console.log(arrayOfNumbers); // (4) [2, -3, 4, 999]
+
+    arrayOfNumbers.unshift(5656); // add element at start
+    console.log(arrayOfNumbers); // (5) [5656, 2, -3, 4, 999]
