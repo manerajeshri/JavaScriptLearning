@@ -64,6 +64,9 @@ var stdtSplit=studentList.split(","); // stringName.split("Seperator")
 console.log("student list after spliting by character i.e. comma :",stdtSplit);
 console.log("total no of student:", stdtSplit.length);
 
+ var studentName = "Rajeshri"
+ console.log(studentName.split(""));
+
 
 // 
 var sentence="Yes you can do it guys,just keep learning andpracticing as well";
