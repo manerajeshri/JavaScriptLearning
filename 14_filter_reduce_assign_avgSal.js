@@ -32,7 +32,7 @@ console.log(`6) Find the average salary of IT department`);
 const arrayIT = arrayOfEmployee.filter( (currentValue) => {
     return currentValue.emp_dept == "IT";
 } );
-const avgIT = arrayIT.reduce( (runningTotal, value) => {
+const avgIT = arrayIT.reduce( (runningTotal, value) => { // running total ,value = object
         return runningTotal + value.emp_salary;
 },0 );
 console.log(`The average salary of employee in IT dept is: INR ${avgIT/arrayIT.length}`);
