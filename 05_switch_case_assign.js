@@ -1,10 +1,12 @@
 console.log(`Month of Year`);
 function monthOfYear(monthNumber) {
     switch (monthNumber) {
-        case 1:
+            case 1:
+            console.log(`Entered month is ${monthNumber}`);
             console.log(`Month : 1 : January`);
             break;
             case 2:
+            console.log(`Entered month is ${monthNumber}`);
             console.log(`Month : 2 : February`);
             break;
             case 3:
@@ -38,7 +40,7 @@ function monthOfYear(monthNumber) {
             console.log(`Month : 12 : December`);
             break;
     
-        default:console.log(`${monthNumber} : Invalid Month Entered.`);
+        default:console.log(`Month : ${monthNumber} : Invalid Month Entered.`);
             break;
     }
 }
