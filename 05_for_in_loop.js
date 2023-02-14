@@ -18,3 +18,10 @@ for (const key in billgates) {
         console.log(key,element); // acess key and value
     }
 }
+
+// for (const key in object) {
+//     if (Object.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// }

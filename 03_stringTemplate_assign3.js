@@ -23,8 +23,8 @@ var givenString = function () {
   var stringsplit = givenStringIs.split(" ");
   console.log(`Total no of words    : ${stringsplit.length}`);
   console.log(``);
-  console.log(`2.1] String length / Total no of words : ${givenStringIs.length / stringslice.length}`);
+  console.log(`2.1] String length / Total no of words : ${givenStringIs.length / stringsplit.length}`);
   console.log(``);
-  console.log(`2.2] String length * Total no of words : ${givenStringIs.length * stringslice.length}`);
+  console.log(`2.2] String length * Total no of words : ${givenStringIs.length * stringsplit.length}`);
 };
 givenString();

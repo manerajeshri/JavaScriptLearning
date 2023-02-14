@@ -99,5 +99,8 @@ var monika = nameString.slice(0,6);//Monika
 var thorat = nameString.slice(7,13);//Thorat
 console.log(`Full name is : ${monika} Haridas ${thorat}`);
 
+let a=nameString.split(" ").join(" Haridas ")
+console.log(a);
+
 
 

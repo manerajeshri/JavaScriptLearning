@@ -38,5 +38,6 @@ function addThreeValues(val1,val2,val3) {
 console.log(`\nAddition is = ${addThreeValues(10.23,600,40)}`);
 
 console.log(' ');
+// as its return some thing so we need variable to get it
 var output=addThreeValues( 'Hello','Good','Morning' );
 console.log('Addition is : ',output);
