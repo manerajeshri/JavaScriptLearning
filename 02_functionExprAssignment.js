@@ -1,5 +1,5 @@
 console.log('1]');
-// console.log('1]','\n','\n','hi'); usinh '\n' for new line in one log 
+// console.log('1]','\n','\n','hi'); using '\n' for new line in one log 
 var square = function (num) {
     console.log('Square of ',num,'=',num * num);
 }
@@ -37,8 +37,8 @@ console.log('5]');
 var string=function (stringName) {
     console.log('String:',stringName);
     console.log('5 A. Total character =',stringName.length);
-    console.log('5 B. character at index 6  :',stringName.charAt(6));
-    console.log('5 C. character at index 11 :',stringName.charAt(11));
+    console.log('5 B. character at index 6  :',stringName.charAt(5));
+    console.log('5 C. character at index 11 :',stringName.charAt(12));
     console.log('5 D. Last character : ',stringName.charAt(stringName.length-1));
     console.log('5 E. First character: ',stringName.charAt(0));
     console.log('5 F.Length of String = ',stringName.length,'\n','   Square = ',stringName.length*stringName.length);

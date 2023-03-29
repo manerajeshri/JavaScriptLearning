@@ -1,9 +1,9 @@
 // Assignment no 1
-var myFullName;
+var myFullName; // Declaration
 console.log(myFullName);
-myFullName="Rajeshri Mane";
+myFullName="Rajeshri Mane"; // Initialisation
 console.log(myFullName);
-myFullName="Rajeshri Prakash Mane";
+myFullName="Rajeshri Prakash Mane"; // Reassign
 console.log(myFullName);
 
 var myLove="I Love only JS";
