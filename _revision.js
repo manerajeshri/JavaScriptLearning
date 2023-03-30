@@ -81,7 +81,7 @@ function add(val1,val2,val3) {
 console.log(`Addition is ${add(10.23, 600, 40)}`); 
 console.log(`Addition is ${add("Hello", " Good", " Morning")}`); 
 
-// Function Expression
+// Function Expression and string
 console.log(`Function Expression`);
 
 var stringFunction =function (myString) {
@@ -97,5 +97,53 @@ var stringFunction =function (myString) {
 stringFunction("JS the most popular language");
 
 
+// String
+
+console.log(`\n===================String======================================`);
+var stringHandsOn = function () {
+    var givenString = "     Hey you are doing good, keep it up     " ;
+    console.log(givenString);
+    //Calculate length of the String
+    console.log(`length of the String : ${givenString.length}`);
+// 3. Remove the leading and trailing extra spaces
+console.log(`Remove the leading and trailing extra spaces : "${givenString.trim()}"`);
+// 4. Print the total number extra spaces count that is removed in step 3.
+console.log(`total number extra spaces count that is removed in step 3 : ${givenString.length - givenString.trim().length}`);
+// 5. Print the first and last character on the same line after trim()
+console.log(`Print the first and last character on the same line after trim() : First: ${givenString.trim().charAt(0)} Last:${givenString.trim().charAt(givenString.trim().length-1)}`);
+// 6. Print the count of total words available in the string after step 3
+console.log(`Print the count of total words available in the string after step 3 :`, givenString.trim().split(" ").length);
+// 7. Print the index of word “good” from the given string
+console.log(`Print the index of word “good” from the given string : ${givenString.indexOf("good")}`);
+// 8. Print the substring starting from index 22, using substring() and slice()
+console.log(`Print the substring starting from index 22, using substring() and slice() :`,givenString.substring(22) , givenString.slice(22));
+// 9. Check, is string ends with word “up” after step 3?
+console.log(`Check, is string ends with word “up” after step 3? : `, givenString.trim().endsWith("up"));
+// 10. Check is string starts with word “Hey” after trimming → i.e after step 3 output string value
+console.log(`Check is string starts with word “Hey” after trimming → i.e after step 3 output string value : `, givenString.trim().startsWith("Hey")); 
+}
+stringHandsOn();
 
 
+// Assignment 11
+
+function squareOfWordLength(string) {
+    console.log(`given Word ${string} Length : ${string.length}`);
+    return string.length*string.length;
+}
+ console.log(`Word Length Square  :${squareOfWordLength("JavaScript")}`);  
+ console.log(`Word Length Square  :${squareOfWordLength("Google Chrome")}`); 
+ console.log(`Word Length Square  :${squareOfWordLength("Developer Smart")}`); 
+
+// FE
+
+var myFunction= function () {
+    var string= "I am Angular Developer ";
+    console.log(`String length is :${string.length} , Tota No of words : ${string.split(" ").length} 
+    (Length / Words)= ${string.length / string.split(" ").length}
+    (Length * Words)= ${string.length * string.split(" ").length}`);
+}
+myFunction();
+
+// Operators
+// Assignment 12

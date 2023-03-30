@@ -49,10 +49,10 @@ console.log(trim1,trim2);
 
 var greet="Good Morning";
 console.log(greet);
-var resultSlice=greet.slice(0,4);
+var resultSlice=greet.slice(0,4); // slice(start,end)
 console.log("Slice Method : for 0 to 4 :",resultSlice);
 console.log("Slice () with start index 4 :",greet.slice(4));
-console.log("Slice () with start index 4 :",greet.slice(4));
+console.log("Slice () with start index 4 :",greet.slice(7));
 console.log("Slice () with  negative start index  :",greet.slice(-7));
 console.log("Slice () with  negative start index and end index :",greet.slice(-7,-2));
 
@@ -66,7 +66,7 @@ console.log("total no of student:", stdtSplit.length);
 
  var studentName = "Rajeshri"
  console.log(studentName.split(""));
-
+console.log(`join`, studentName.split("").join("*") );
 
 // 
 var sentence="Yes you can do it guys,just keep learning andpracticing as well";
