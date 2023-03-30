@@ -147,3 +147,58 @@ myFunction();
 
 // Operators
 // Assignment 12
+
+// find greater no
+var greaterNo = function (num1,num2) {
+
+    num1>num2 ? console.log(`Given no are : ${num1},${num2} and greater no is ${num1}`) : console.log(`Given no are : ${num1} ,${num2} and greater no is ${num2}`); 
+}
+greaterNo(10,-10);
+greaterNo(800,899);
+
+// find even odd num
+var isEvenOdd = function (num) {
+    var result =  (num%2==0) ? "True " : "False";
+    return console.log(`Is number ${num} is Even ? : ${result}`);
+}
+isEvenOdd(29);
+
+// find word length even or odd
+ var wordLengthEvenOdd = function (string) {
+    return (string.length%2 == 0)? console.log(`Given word ${string} length = ${string.length} is Even`) : console.log(`Given word ${string} length = ${string.length} is Odd`)
+ }
+ wordLengthEvenOdd("JavaScript");
+ wordLengthEvenOdd("Google");
+ wordLengthEvenOdd("developer");
+
+
+ // assignment 13 ternery operator
+
+ function maleMarriageEligibility(gender, age, boyName) {
+    return (gender==="Male" && age>=21) ? console.log(`Hey ${boyName} You are elogible for Marriage`) : console.log(`Not Eligible for Marriage`);
+ }
+ maleMarriageEligibility("Male",25,"Bill Gates");
+ maleMarriageEligibility("Male",17, "Stew Jobs");
+
+ function femaleMarriageEligibility(gender, age, girlName) {
+    if (gender==="Female" && age>=18) {
+        console.log(`Hey ${girlName} You are elogible for Marriage`)
+    } else {
+        console.log(`Not Eligible for Marriage`);
+    }
+ }
+  femaleMarriageEligibility("Female",27, "Malinda");
+  femaleMarriageEligibility("Female",16,"Jenny");
+
+// Assignment 14
+var eligibility = function (grad, hsc,ssc,name) {
+    (grad>=70 || hsc>=80 || ssc>=90)? console.log(`Congo! ${name} you are eligible for TCS interview`): console.log(`Not Eligible`);
+}
+eligibility(80,6,90, "Aaradhya");
+eligibility(60,79,88,"abc")
+
+//  Flow Control
+// Assignment 16 
+
+
+

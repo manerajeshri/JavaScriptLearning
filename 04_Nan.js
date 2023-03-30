@@ -16,6 +16,6 @@ var num = new Number("Prathamesh");
 console.log(`Prathamesh is: ${num}`); //Nan
 console.log(`typeof num is : ${typeof num}`); //Object
 
-var num1 = new Number("100"); 
-console.log(`Prathamesh is: ${num1}`); //100
-console.log(`typeof num is : ${typeof num1}`); //object
+var num2 = new Number("100"); 
+console.log(`num2 is: ${num2}`); //100
+console.log(`typeof num is : ${typeof num2}`); //object

@@ -28,7 +28,9 @@ console.log(``);
  
  var num=15;
  var result1 = ++num; //  var result =num + 1;
- console.log(`Increment operator  result is  ${result1}`);
+ console.log(`Increment operator  result is  ${result1}`, num);
+ console.log(`num++`, num++,num);//num++ : value logs first then increment 
+ console.log(`++num`, ++num, num); // ++num : increment first then logs
 
  var num=15;
  var result1 = --num; //  var result =num + 1;

@@ -1,5 +1,6 @@
 
 var numAdd = 10 + 40;
+console.log(`numAdd`, numAdd);
 var strAdd = "Raj " + 7 ;
 console.log(`strAdd is : ${strAdd}`);
 
@@ -32,7 +33,7 @@ console.log(`My number is ${convToString} Datatype is ${typeof convToString}`);
 
 
 var numAdd = 10 + 40; // 50
-var strAdd = "Pooja " + 70;
+var strAdd = "Pooja " + 70; // concating using +
  console.log(`"Pooja " + 70 is: ${strAdd}`);
 
 
