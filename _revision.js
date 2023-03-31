@@ -560,15 +560,54 @@ isPrimeNumber(1);
 // isPrimeNumber(9);
 // isPrimeNumber(1);
 
-console.clear();
-
 // print prime number from 1 to 10
 
-function findPrimeNumber(num) {
-    
+function findPrimeNumber(givenNum) {
+var primeNumbers="";
+var primeNoCount=0;
+for (let num = 1; num <=givenNum; num++) {
+    var count = 0;
+  for (let i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      count++;
+    }
+  }
+  if (count == 2) {
+    primeNumbers= primeNumbers.concat(" ", num);
+    primeNoCount++;
+  } 
 }
-findPrimeNumber(10);
+console.log(`Prime numbers between 1 and ${givenNum} : ${primeNumbers} Count : ${primeNoCount}`);
+}
+findPrimeNumber(100);
+console.clear();
 // 4. What is Fibonacci Series ?
+// The are the numbers in the following integer sequence.
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377
+console.log(`Fibonacci Series`);
+let values=[0,1];
+for (let i = 2; i <15; i++) {
+    values.push( values[i-1] + values[i-2])
+}
+console.log(values);
+
+var x = 0;
+var y = 1;
+var sum =0;
+for (let i = 1; i < 15; i++) {
+    console.log(sum);
+    sum = sum + i
+}
+
+var sum = x+y;
+
+
+
+
+
+
+
+
 
 
 
