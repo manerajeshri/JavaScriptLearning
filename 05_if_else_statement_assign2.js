@@ -1,6 +1,6 @@
 console.log(`\n1] Even Odd number\n`);
 function numEvenOdd(num) {
-    if ((typeof num)=== "number") { // q2 Accept == !== ===  not accept !===
+    if ((typeof num)=== "number") { //Accept != == !== === 
         // console.log(`It is a ${(typeof num)} ${num} : Valid Data`);
         
 if (num%2==0) {
@@ -19,7 +19,8 @@ numEvenOdd(13);
 numEvenOdd(0);
 numEvenOdd("70");// Invaid data
 numEvenOdd("Raj");
-// numEvenOdd(Raj); // q1 how to handle this
+var Raj;
+numEvenOdd(Raj); 
 
 // ==============================Greatest number from three given number
 console.log(`\n2] Greatest number from three given number`);

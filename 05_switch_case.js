@@ -1,5 +1,13 @@
 // displaying 1- mon 2-Tue 3-wed 4-Thu 5-fri 6-sat 7 Sun
+// syntax :
+// switch (key) {
+//     case value:
+        
+//         break;
 
+//     default:
+//         break;
+// }
 
 var dayNumber = 3;
 switch (dayNumber) {
