@@ -1,24 +1,23 @@
 
 
-function add(num1,nu2) {
-    var result =num1 + num2;
-    console.log(`result is : ${result}`);
+// function add(num1,num2) {
+//     var result =num1 + num2;
+//     console.log(`result is : ${result}`);
 
-}
+// }
 
-var singerName = "Kishor Kumar";
+// var singerName = "Kishor Kumar";
 // const PI = 3.1412;
 
-let actorName;
-
-console.log(actorName);
+// let actorName;
+// console.log(actorName);
 
 var isMarried = true;
 if (isMarried) {
-  let greet = "Congratulation";
-  //console.log(greet);
+  var greet1 = " testing Congratulation";
+  // console.log(greet1);
 }
-//console.log(greet);
+console.log(greet1); // cant acess greet outside if{} if it  is let or const  local scope block scope and can acess if its var
 
 function add(num1, num2) {
   var result = num1 + num2;
@@ -30,8 +29,9 @@ function add(num1, num2) {
     const PI = 3.14; 
     let myName = "Mohit";
   }
-  // console.log(PI);
-  console.log(greet);
+  // console.log(PI); // not acessable as it is const
+  // console.log(myName); // not acessable as it is let
+  console.log(greet); // can acess greet as its var has functional scope
   console.log(`Result is : ${result}`);
   return result;
 }

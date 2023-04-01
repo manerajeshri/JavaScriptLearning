@@ -88,19 +88,64 @@
 
 
 //adding father name using concat
-var firstName="Rajeshri ";
-var lastName="Mane";
-var result = firstName.concat("Prakash ",lastName);
-console.log('concatination using .concat is :',result);
+// var firstName="Rajeshri ";
+// var lastName="Mane";
+// var result = firstName.concat("Prakash ",lastName);
+// console.log('concatination using .concat is :',result);
 
 //adding father name 
-var nameString = "Monika Thorat";
-var monika = nameString.slice(0,6);//Monika
-var thorat = nameString.slice(7,13);//Thorat
-console.log(`Full name is : ${monika} Haridas ${thorat}`);
+// var nameString = "Monika Thorat";
+// var monika = nameString.slice(0,6);//Monika
+// var thorat = nameString.slice(7,13);//Thorat
+// console.log(`Full name is : ${monika} Haridas ${thorat}`);
 
-let a=nameString.split(" ").join(" Haridas ")
-console.log(a);
+
+// console.log(nameString.split(" ").join(" Haridas "));
+
+
+// var key = true;
+
+// switch (key) {
+//     case true:
+//         console.log(`ONE`);
+//         break;
+//         case false:
+//         console.log(`Two`);
+//         break;
+//     default:
+//         break;
+// }
+
+
+
+
+// fibonassi
+
+// let fibo = [0,1];
+// for (let i = 2; i < 7; i++) {
+//     fibo.push(fibo[i-1] + fibo[i-2]);
+// }
+// console.log(fibo);
+
+
+
+
+// sum of cube
+var sum =0;
+var cube
+for (let i = 1; i <=5; i++) {
+    cube= i*i*i;
+    sum =sum + cube
+}
+console.log(sum);
+
+
+
+
+
+
+
+
 
 
 

@@ -345,6 +345,19 @@ function monthofYear(monthNumber) {
 }
 monthofYear(19)
 
+// Assignment 24
+var key = true;
+switch (key) {
+    case true:
+        console.log(`ONE`);
+        break;
+        case false:
+        console.log(`Two`);
+        break;
+    default:
+        break;
+}
+
 // Assignment 25
 // while
 
@@ -581,6 +594,8 @@ console.log(`Prime numbers between 1 and ${givenNum} : ${primeNumbers} Count : $
 }
 findPrimeNumber(100);
 console.clear();
+
+
 // 4. What is Fibonacci Series ?
 // The are the numbers in the following integer sequence.
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377
@@ -590,16 +605,6 @@ for (let i = 2; i <15; i++) {
     values.push( values[i-1] + values[i-2])
 }
 console.log(values);
-
-var x = 0;
-var y = 1;
-var sum =0;
-for (let i = 1; i < 15; i++) {
-    console.log(sum);
-    sum = sum + i
-}
-
-var sum = x+y;
 
 
 
