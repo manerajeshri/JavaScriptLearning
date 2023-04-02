@@ -14,21 +14,21 @@ const datta = {
 
   
 
-  const person = {
+  const person1 = {
     height: 6,
     weight: 70,
     age: 23,
     name: "Billgates"
   }
-  console.log(typeof person);
-  console.log(person);
+  console.log(typeof person1);
+  console.log(person1);
   
-  const personAge = person.age;
-  console.log(`Person age is: ${personAge}`);
+  const personAge1 = person1.age;
+  console.log(`Person age is: ${personAge1}`);
 
 
-  const personName = person["name"];
-console.log(personName);
+  const personName1 = person1["name"];
+console.log(personName1);
 
 
 const person = {
@@ -91,12 +91,6 @@ const student = {
 
     }
 }
-console.log(`Accessing an Nested object property`);
-const scienceMark =  student.marks.science;
-console.log(scienceMark);
-
-
-
 
 console.log(`Accessing an Nested object property`);
 const scienceMark =  student.marks.science;
@@ -108,8 +102,17 @@ student.marks.english = 97;
 console.log(`Adding an Nested object property`);
 student.marks.programming = 100;
 
+ // calling function add
+
+ console.log(`${student.marks.add()}`);
+
 console.log(`Deleting an Nested object property`);
 delete student.marks.english;
+
+ 
+
+
+
 
 console.log(`Object entries`);
 const billgates = {
@@ -122,4 +125,3 @@ console.log(Object.entries(billgates));
 console.log(Object.keys(billgates));
 console.log(Object.values(billgates));
 
-  

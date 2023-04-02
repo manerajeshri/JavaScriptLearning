@@ -44,10 +44,16 @@ const sunilAddress = {
     pin: "431202"
 }
 // Merging two objects
-Object.assign(sunil, sunilAddress);
+// Object.assign(sunil, sunilAddress); 
+// by this two object get merged and result is in sunil and sunilAddress remain unchanged
 console.log(sunil);
 console.log(sunilAddress);
 
+// by this mearge result is in new object and both (sunil & sunilAddress) remain unchanged
+let newObject= Object.assign({},{...sunil},{...sunilAddress});
+console.log(`newObject`, newObject);
+console.log(`sunil`, sunil);
+console.log(`sunilAddress`,sunilAddress);
 
 
 

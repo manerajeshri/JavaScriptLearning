@@ -33,8 +33,7 @@ class College {
 collegeDetails(){
     console.log(`College Details :: Name:${this.collegeName} City:${ this.city} University:${this.university} Departments:${this.totalDepartments} Grade:${this.collegeGrade}`);
 }
-//traverse objects using for in loop
-
+// write method using for in loop to traverse objects
 traverseObject(collegeNam) {
     for (const key in collegeNam) {
         if (Object.hasOwnProperty.call(collegeNam, key)) {

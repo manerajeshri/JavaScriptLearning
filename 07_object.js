@@ -13,16 +13,16 @@ myLaptop = {
 const mobile ={
 
 }
-mobile.company = "Microsoft";
-mobile.camera = "20px"
+mobile.company = "Microsoft"; // adding properties to object
+mobile.camera = "20px" // adding properties to object
 
 console.log(mobile);
 
 
-//object is container which can store different values
+//object is container which can store different values in key(property) : value pair
 let person = {
     // key : value
-    "height":6,
+    "height":6,  // kay can be : string, variabe, method , function
     "weight" : 70,
     "age" : 23,
     name : "Raj",
@@ -70,7 +70,7 @@ const student ={
     marks : {
         science :70,
         math : 90,
-        engligh: 87,
+        english: 87,
         city : "Pune",
         add : function () {
           return  this.science+this.math+this.english;
@@ -83,7 +83,7 @@ const student ={
 console.log(`Accessing Nested object property`);
 const scienceMark = student.marks.science;
 console.log(`Science Mark : ${scienceMark}`);
-const scienceMark1 = student.marks.engligh;
+const scienceMark1 = student.marks.english;
 console.log(`english Mark : ${scienceMark1}`);
 
 console.log(`Updating science Mark :97`);
@@ -131,6 +131,16 @@ console.log(Object.entries(billgates));
 console.log(Object.keys(billgates));
 console.log(Object.values(billgates));
 
+// using for in loop for obect iteration
+// syntax
+// for (const key in object) {
+//     if (Object.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// }
+
+
 for (const key in billgates) {
     if (Object.hasOwnProperty.call(billgates, key)) {
         const element = billgates[key];
@@ -148,3 +158,6 @@ if (isAvailable) {// if loop execute when condition is true
 }else{
     console.log(`"height" property is Not deleted successfully`);
 }
+
+console.log(`is company property present in billgate object??checking using in operator ==> `,"company" in billgates );
+console.log(`is city property present in billgate object??checking using in operator ==> `,"city" in billgates );

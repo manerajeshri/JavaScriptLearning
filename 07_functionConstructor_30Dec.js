@@ -4,7 +4,7 @@ function Student(name ,rollNo,age){
     this.age =age;
 }
 
-//let objectName = new ClassName()
+//let objectName = new FunctionConstructorName(parameters)
 let s1 = new Student("Vinny",111,23);
 let s2 = new Student("Jenny",22,35);
 console.log(s1);
@@ -26,15 +26,19 @@ function Student(name, rollNo, age){
     this.rollNo = rollNo;
     this.age = age;
  }
- Student.prototype.country = "India";
+ 
  let vinny = new Student("Vinny", 111, 23);
  let jenny = new Student("Jenny", 44, 45);
  let minny = new Student("Minny", 55, 23);
  let tommy = new Student("Tommy", 66, 35);
- console.log(vinny);
+
+  console.log(vinny);
  console.log(jenny);
  console.log(minny);
  console.log(tommy);
+
+ // adding prototype
+ Student.prototype.country = "India";
  console.log(vinny.country);
  console.log(minny.country);
  console.log(jenny.country);

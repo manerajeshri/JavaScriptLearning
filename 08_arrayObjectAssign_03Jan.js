@@ -1,5 +1,6 @@
 console.log(`\nA. Created Class with Data members : `);
-class Bank {
+class Bank { // creating class
+    bankName;location;accountNo;ifsc;interestRate // declaring properties
     constructor (bankName,location,accountNo,ifsc,interestRate){
         this.bankName = bankName,
         this.location= location,
@@ -25,9 +26,7 @@ console.log(hdfcBank);
 console.log(panjabBank);
 
 console.log(`\nC. Adding all object in array and transverse array using for of`);
-
 const allBankArray =[axisBank,sbiBank,iciciBank,kotakBank,hdfcBank,panjabBank];
-
 for (const bank of allBankArray) {
     console.log(`Bank Name: ${bank.bankName} Location: ${bank.location} `);
 }
@@ -44,4 +43,6 @@ console.log(`\nE. Log details using for loop`);
 for (let index = 0; index < allBankArray.length; index++) {
     const element = allBankArray[index];
     console.log(element);
+    console.log(element.bankName);
 }
+

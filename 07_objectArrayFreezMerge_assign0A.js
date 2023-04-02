@@ -22,7 +22,7 @@ console.log(collegeDetails);
 console.log(`\n3] Merge these two objects`);
 
 const meargePersonCollege = Object.assign({},personalDetails,collegeDetails);
-console.log(`After Mearging :`)
+console.log(`After Mearging : using Object.assign({},personalDetails,collegeDetails)`)
 console.log(meargePersonCollege);
 
 console.log(`\n4] Create an array of your friend names and freeze it`);

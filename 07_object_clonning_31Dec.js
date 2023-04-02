@@ -3,12 +3,12 @@ let yourName = "Sunil";
 
 myName = yourName; // Deep Clone always performed on primitive data type
 
-console.log(myName);
-console.log(yourName);
+console.log(`myName`,myName); // myName Sunil
+console.log(`yourName`,yourName); // yourName Sunil
 
 yourName = "Jenifer";
-console.log(myName);
-console.log(yourName);
+console.log(myName); // Sunil
+console.log(yourName); // Jenifer
 
 let anil = {
     age: 23,
@@ -23,5 +23,6 @@ let sunil = {
 anil = sunil; // Shallow cloning
 sunil.country = "India";
 
-console.log(anil);
-console.log(sunil);
+console.log(anil); // {age: 26, name: 'Sunil', company: 'Google', country: 'India'}
+console.log(sunil);// {age: 26, name: 'Sunil', company: 'Google', country: 'India'}
+// update in one will reflects in second

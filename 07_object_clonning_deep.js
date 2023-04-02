@@ -1,5 +1,5 @@
 
-// Deep cloning
+// Shallow and Deep cloning
 
 let empSumit = {
 
@@ -7,22 +7,26 @@ let empSumit = {
     empSalary : "70K"
 }
 
-//...Spread operator
-// console.log(empSumit);
-// console.log({...empSumit});
-
+console.log(`1. shallow clonning example`);
 // let empMohit = empSumit;
-//o/p --> {empName: 'Mohit', empSalary: '70K'}
-//        {empName: 'Mohit', empSalary: '70K'}
+// empMohit.empName = "Mohit";// chnges made to mohit will affect sumit
+// console.log(`empMohit`,empMohit); //o/p --> {empName: 'Mohit', empSalary: '70K'}
+// console.log(`empSumit`,empSumit); //        {empName: 'Mohit', empSalary: '70K'}
 
-//Using ...Spread operator
-let empMohit = {...empSumit};
-empMohit.empName = "Mohit";// chnges made to mohit will affect onlymohit not sumit
-console.log(empMohit);
-console.log(empSumit);
+//...Spread operator use
+// console.log(`empSumit`,empSumit); // empSumit {empName: 'Sumit', empSalary: '70K'}
+// console.log(`...Spread operator`,{...empSumit}); // ...Spread operator {empName: 'Sumit', empSalary: '70K'}
+
+console.log(`\n 2 Partial Deep clonning Using ...Spread operator`);
+let empMohit = {...empSumit}; //Using ...Spread operator
+empMohit.empSalary = "75k";// chnges made to mohit will affect onlymohit not sumit
+empMohit.name = "Mohit"; // adding new prop
+empMohit.empName = "Mohit" // updating existing prop
+console.log(`empMohit`,empMohit);
+console.log(`empSumit`,empSumit);
 
 // 2. Deep clone using JSON.stringfy
-console.log("===== Deep clone using JSON.stringfy ======");
+console.log(" \n 3 Deep clone using JSON.stringfy ======");
 const empStew = {
     name: "Stew Jobs",
     age: 50,

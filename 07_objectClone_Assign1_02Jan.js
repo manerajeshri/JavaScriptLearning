@@ -2,12 +2,12 @@
 console.log(`Given array arrayNums : [20, 3, 4, 56, 90, 400, 49]`);
 const arrayNums=[20, 3, 4, 56, 90, 400, 49];
 
-console.log(`\n1] Shallow clone on arrayNjums, and push() 55,66`);
+console.log(`\n1] Shallow clone on arrayNums, and push() 55,66`);
 let shallowClone = arrayNums;
 console.log(`shallow cloned Array : `,shallowClone );
 shallowClone.push(55 ,66);
 console.log(`After push() updated cloned array : `,shallowClone);
-console.log(`arrayNjums : `,arrayNums);
+console.log(`arrayNums : `,arrayNums);
 
 console.log(`\n2] Deep clone using spread operator Update original array`);
 
@@ -17,7 +17,9 @@ console.log(`deep cloned Array : ${deepClone}`); //(9) [20, 3, 4, 56, 90, 400, 4
 //deep cloned Array :  {0: 20, 1: 3, 2: 4, 3: 56, 4: 90, 5: 400, 6: 49, 7: 55, 8: 66}
 
 arrayNums.push(10,25);
+console.log(`After Push()`);
 console.log(`Original array with 10, 25 at last position : ${arrayNums}` );
+console.log(`deep cloned Array remains unchanged : ${deepClone}`); 
 
 console.log(`\n3] given arrayEven merge/concat with arrayNums : `);
 arrayEven = [2,30,14,8];
