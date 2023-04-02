@@ -1,8 +1,8 @@
 console.log(`======== join() ==========`);
 var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
 let joinResult = arrayOfNum.join(" | ");
-console.log(joinResult);
-console.log(typeof joinResult);
+console.log(joinResult); // 4 | 5 | 6 | 8 | 9 | 33 | 66
+console.log(typeof joinResult);// string
 
 var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
 let arrayOfNames = ["A","B","C","D","E"];
@@ -14,13 +14,13 @@ console.log(typeof concatArray);// object
 
 console.log(`Resize an Array`);
 var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
-console.log(arrayOfNum.length);
+console.log(arrayOfNum.length); // 7
 arrayOfNum.length = 5;
-console.log(arrayOfNum);
-console.log(arrayOfNum.length);
+console.log(arrayOfNum); // (5) [4, 5, 6, 8, 9]
+console.log(arrayOfNum.length); // 5
 
 var arrayOfNum = [4, 5, 6, 8, 9, 33, 66];
-console.log(arrayOfNum.length);
+console.log(arrayOfNum.length); //7
 arrayOfNum.length = 10;
-console.log(arrayOfNum);
-console.log(arrayOfNum.length);
+console.log(...arrayOfNum); // 4 5 6 8 9 33 66 undefined undefined undefined
+console.log(arrayOfNum.length); // 10

@@ -40,7 +40,9 @@ console.log(`After  : ${fruits_seasonal4}`);
 console.log(`\n7] log elements starting from index 1 to 4`);
 const fruits_seasonal5 = ["Banana","Orange","Apple","Mango","Water Melon"];
 console.log(`Before : ${fruits_seasonal5}`);
-console.log(`After  : ${fruits_seasonal5.splice(1,4)}`);
+console.log(`After using splice  : ${fruits_seasonal5.splice(1,4)}`);
+// console.log(`After using slice  : ${fruits_seasonal5.slice(1,4)}`);  // Orange,Apple,Mango
+console.log(`Before : ${fruits_seasonal5}`); // slice dosent modify original array: Banana,Orange,Apple,Mango,Water Melon
 
 console.log(`\n8] log last 3 elements using length property`);
 const fruits_seasonal6 = ["Banana","Orange","Apple","Mango","Water Melon"];

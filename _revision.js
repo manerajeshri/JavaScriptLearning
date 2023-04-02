@@ -593,8 +593,6 @@ for (let num = 1; num <=givenNum; num++) {
 console.log(`Prime numbers between 1 and ${givenNum} : ${primeNumbers} Count : ${primeNoCount}`);
 }
 findPrimeNumber(100);
-console.clear();
-
 
 // 4. What is Fibonacci Series ?
 // The are the numbers in the following integer sequence.
@@ -606,29 +604,127 @@ for (let i = 2; i <15; i++) {
 }
 console.log(values);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.clear();
 // Assignment 31
+// For a given array fruits perform below operations as:
+const fruits_seasonal = ["Banana", "Orange", "Apple", "Mango", "Water Melon"];
+                        // 0          1        2           3           4
+console.log(`Given array : ${fruits_seasonal}`);
+// 1. Log the first and last element on console
+console.log(`1. first and last element                          ::`,fruits_seasonal[0], fruits_seasonal[fruits_seasonal.length-1]);
+// 2. Add element → Papaya before the element ‘Banana’ and then log array on console
+fruits_seasonal.unshift("Papaya")
+console.log(`2. Add element → Papaya before the element ‘Banana’::${fruits_seasonal} `);
+// 3. Remove ‘Mango’ from the array
+fruits_seasonal.splice(4,1)
+console.log(`3. Remove ‘Mango’ from the array                   ::${fruits_seasonal}`);
+// 4. Add element or insert an element ‘Pineapple’ at the last position
+fruits_seasonal.push("Pineapple")
+console.log(`4. Add / insert an ‘Pineapple’ at the last position ::${fruits_seasonal}`);
+// 5. Insert an element - ‘Dragon Fruit’ before “Water Melon”
+fruits_seasonal.splice(4,0,"Dragon Fruit")
+console.log(`5. Insert       ‘Dragon Fruit’ before “Water Melon” ::${fruits_seasonal}`);
+// 6. Replace an element ‘Orange’ with ‘Kiwi’
+fruits_seasonal.splice(2,1,"Kiwi")
+console.log(`6. Replace an element ‘Orange’ with ‘Kiwi’          ::${fruits_seasonal}`);
+// 7. Log the elements starting from index 1 to 4
+console.log(`7. Log the elements starting from index 1 to 4      :: ${fruits_seasonal.slice(1,5)}`);
+// 8. Only select last 3 element and log on console: Use the length property
+console.log(`8. Only select last 3 elementUse the length property::${fruits_seasonal.slice(fruits_seasonal.length-3)}`);
+
+// Assignment 32
+
+const arrayNumbers = [ 20, 31, 40, 25, 23, 11, 29, 9, 60, 2, 11 ];
+console.log(`arrayNumbers : ${arrayNumbers}`);
+console.log(`1. Find the total elements available or length and log on console= ${arrayNumbers.length}`);
+console.log(`2. Log the first element= ${arrayNumbers[0]} and last element= ${arrayNumbers[arrayNumbers.length-1]} in arrayNumbers and log on console`);
+console.log(`3. Log the third last element=${arrayNumbers[arrayNumbers.length-3]} using length property and log on console`);
+// `4. Find the all even numbers and log on console
+let arrayEven =[]
+for (let i = 0; i < arrayNumbers.length; i++) {
+    const element = arrayNumbers[i];
+    if (element%2 == 0) {
+        arrayEven.push(element)
+    }
+}
+console.log(`4. Find the all even numbers and log on console ${arrayEven}`);
+// console.log(`5. Find the odd numbers and log on console`);
+let arrayOdd =[]
+for (let i = 0; i < arrayNumbers.length; i++) {
+    const element = arrayNumbers[i];
+    if (element%2 !== 0) {
+        arrayOdd.push(element)
+    }
+}
+console.log(`5. Find the all Odd numbers and log on console ${arrayOdd}`);
+// console.log(`6. Find all the even positioned elements from arrayNumbers, for loop`);
+var even_positioned=[]
+for (let i = 0; i < arrayNumbers.length; i++) {
+    if (i%2==0) {
+        even_positioned.push(arrayNumbers[i])
+    }
+}
+console.log(`6. Find all the even positioned elements from arrayNumbers, ${even_positioned}`);
+// console.log(`7. Find all the odd positioned elements from arrayNumbers, log on console`);
+var odd_positioned=[]
+for (let i = 0; i < arrayNumbers.length; i++) {
+    if (i%2!=0) {
+        odd_positioned.push(arrayNumbers[i])
+    }
+}
+console.log(`7. Find all the odd positioned elements from arrayNumbers, ${odd_positioned}`);
+// console.log(`8. Find the sum of all elements from arrayNumbers, log on console`);
+let sum=0;
+for (let i = 0; i < arrayNumbers.length; i++) {
+    const element = arrayNumbers[i];
+    sum= sum + element;
+}
+console.log(`8. Find the sum of all elements from arrayNumbers= ${sum}`);
+// console.log(`9. Find the numbers which are multiple of 5`);
+let mulOf5 = []
+for (let i = 0; i < arrayNumbers.length; i++) {
+    const element = arrayNumbers[i];
+    if (element%5==0) {
+        mulOf5.push(element)
+    }
+}
+console.log(`9. Find the numbers which are multiple of 5 == ${mulOf5}`);
+console.log(`10. Is number 115 available in arrayNumbers ?:: ${arrayNumbers.includes(115)}`);
+console.log(`11. Is number 23 available in arrayNumbers ? :: ${arrayNumbers.includes(23)} `);
+// console.log(`12. Insert numbers → 55, 66 before index 3 and log array on console`);
+arrayNumbers.splice(3,0,55,66)
+console.log(`12. Insert numbers → 55, 66 before index 3 :::${arrayNumbers}`);
+// console.log(`13. Delete 3 elements starting from index 4 and log arrayNumbers on console`);
+arrayNumbers.splice(4,3)
+console.log(`13. Delete 3 elements starting from index 4 == ${arrayNumbers}`);
+
+console.clear();
+
+const arrayNumber = [20, 31, 40, 25, 23, 11, 29, 9, 60, 2, 11];
+function is_include(num, replaceValue) {
+//   console.log(`arrayNumber`, arrayNumber);
+  var count=0;
+  for (let i = 0; i < arrayNumber.length; i++) {
+    const element = arrayNumber[i];
+    if (element === num) {
+      arrayNumber[i] = replaceValue;
+      count++;
+    }
+  }
+  if (count != 0) {
+    console.log(`arrayNumber`, arrayNumber, `count : ${count}`);
+  } else {
+    console.log(`arrayNumber ${arrayNumber} ==> Doesn't include ${num}`);
+  }
+}
+is_include(77, "**");
+
+
+
+
+
+
+
+
+
+

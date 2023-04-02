@@ -33,7 +33,7 @@ console.log(arrayOfNum);
 console.log(`\n 4] pop() method : Removing last element of array`);
 var arrayOfNumbers =[1,2,3,4,5,6];
 console.log(arrayOfNumbers); // (6) [1, 2, 3, 4, 5, 6]
-var popResult = arrayOfNumbers.pop(3);
+var popResult = arrayOfNumbers.pop(2);
 console.log(`arrayOfNumbers.pop() :`,popResult); //6  pop() removes last element of array
 console.log(arrayOfNumbers); // (5) [1, 2, 3, 4, 5
 
@@ -79,8 +79,8 @@ console.log(arrayOfNumbers);
 console.log(`add 88 befor index2 , 0 means no delete just insert 88`);
 var resultOfSplice = arrayOfNumbers.splice(2,0,88) //add 88 befor index2 , 0 means no delete just insert 88
 console.log(arrayOfNumbers);
-console.log(`add 88 99 77 befor index2 , 0 means no delete just insert 88`);
-var resultOfSplice = arrayOfNumbers.splice(2,0,88,99,77) //add 88 befor index2 , 0 means no delete just insert 88
+console.log(`add 88 99 77 befor index2 , 0 means no delete just insert 88 99 77`);
+var resultOfSplice = arrayOfNumbers.splice(2,0,88,99,77) //add 88 99 77 befor index2 , 0 means no delete just insert 88
 console.log(arrayOfNumbers);
 
 

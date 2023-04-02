@@ -50,7 +50,7 @@ for (let index = 0; index < arrayOfNumbers.length; index++) {
 }
 
 
-console.log(`even `);
+console.log(`even positioned element `);
 for (let index = 0; index < arrayOfNumbers.length; index++) {
    if (index%2==0) {
     const element = arrayOfNumbers[index];
