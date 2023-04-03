@@ -698,8 +698,6 @@ console.log(`12. Insert numbers → 55, 66 before index 3 :::${arrayNumbers}`);
 arrayNumbers.splice(4,3)
 console.log(`13. Delete 3 elements starting from index 4 == ${arrayNumbers}`);
 
-console.clear();
-
 const arrayNumber = [20, 31, 40, 25, 23, 11, 29, 9, 60, 2, 11];
 function is_include(num, replaceValue) {
 //   console.log(`arrayNumber`, arrayNumber);
@@ -719,11 +717,93 @@ function is_include(num, replaceValue) {
 }
 is_include(77, "**");
 
+// Assignment 33
+// Create an empty object with name → professor
+let professor ={} ; console.log(`professor //Create an empty object with name → professor ==>`, professor);
+// 1. Think of all the properties that you could add
+professor.name="Rajeshri"; 
+professor.qualification ="Mtech";
+professor.age = 34;
+console.log(`1. Think of all the properties that you could add==>`, professor);
+// 2. Also include nested object ‘degrees’ like engineering: ‘CSC’, PHD: ‘Adv Computing’ and few  more.
+let degrees={
+        engineering: "CSC", 
+        PHD: "Adv Computing"
+    }
+professor.degree = degrees;
+console.log(`professor`,professor);
+console.log(`Also include nested object ‘degrees’ ==> professor.degree==>`, professor.degree);
 
+// 3. Also add one more nested object ‘certificates’ with his certificates like ‘Hacker Rank
+// Participation’, ‘Certificate in IFE course’, ‘Certificate in Adv Programming’
+let certificates = {
+  certificate1: "Hacker Rank Participation",
+  certificate2: "Certificate in IFE course",
+  certificate3: "Certificate in Adv Programming",
+};
+professor.certificates=certificates;
+console.log(professor.certificates);
+// 4. Add function as a value which should concat all degrees in step 2,
+// please return as string and log on console with - Teacher total degrees are
+var concatDegrees = function () {
+   return console.log(`Teacher total degrees are : ${professor.degree.PHD.concat(" and ",professor.degree.engineering)}`);
+}
+professor.concatDegrees= concatDegrees;
+professor.concatDegrees();
+// 5. Try to add new property and log on console
+professor.mobile=77930074;
+console.log(`5. Try to add new property and log on console==>professor.mobile`, professor.mobile);
+// 6. Modify any existing property and log complete object on console
+console.log(`6. Modify any existing property and log complete object on console`);
+professor.mobile=99999999999
+console.log(`modified mobile:`,professor.mobile);
+// 7. Delete any one certificate from nested object
+console.log(`7. Delete any one certificate from nested object`);
+console.log(`professor.certificates`, professor.certificates);
+delete professor.certificates.certificate2
+console.log(`After delete professor.certificates.certificate2`,professor.certificates);
+// 8. Add new certificate in nested object - ‘certificates’
+console.log(`8. Add new certificate in nested object - ‘certificates’`);
+professor.certificates.certificate4 = "Angular"
+console.log(`After professor.certificates.certificate4 ==>`, professor.certificates );
+// 9. Log the nested object ‘certificate’ on console
 
+// Assignment 34: Object with data member and member function
+console.log(`Create an objects → sbiBank, axisBank, hdfcBank, yesBank with data members such as
+A. Data members: bankName, location, accountNo, ifsc, interestRate`);
+// B. Set the values separately according to their bank details
+// C. Add a member function → showDetails( ), In this function log the data members of that
+// object in one line. Note: This function doesn’t have return value and no args
+let sbiBank = {
+    bankName : "SBI Bank", 
+    location : "pune", 
+    accountNo : 76767, 
+    ifsc: "SBIIFSC07", 
+    interestRate : "9%",
+    showDetails : function () {
+        console.log(`**bankName : ${this.bankName} **location : ${this.location}   account No   ${this.accountNo}    ifsc  ${this.ifsc } interest rate : ${this.interestRate}`);
+        // return  `**bankName : ${this.bankName} **location : ${this.location}   account No   ${this.accountNo}    ifsc  ${this.ifsc } interest rate : ${this.interestRate}`
+    }
+}
+// D. Invoke the function showDetails( ) on each object separately
+sbiBank.showDetails();
+// console.log(`${sbiBank.showDetails()}`); // log when using return
 
+console.clear();
 
-
+// Assignment 35 → Object cloning and Traversing
+// 1. Create the object → ‘bank_sbi’ using literals with at least 4 properties
+// 2. Create the object → ‘bank_location’ using literals with properties: street, city, pin_code
+// 3. Clone the step 1 ( bank_sbi ) and step 2 ( bank_location ) objects using
+// ○ Object.assign( )
+// ○ Spread Operator
+// Note: Log the cloned object details on console with meaning message using strings
+// template
+// 4. Create the object using literals → rate_of_interest with properties
+// ○ home_loan_interest, personal_loan_interest, due_interest
+// 5. Merge the step 1, step 2 and step 4 objects into new object namely → sbi_details
+// Log all the properties that ‘sbi_details’ got after merging with meaning message
+// 6. Traverse this merged object - step 5 using loop
 
 
 
