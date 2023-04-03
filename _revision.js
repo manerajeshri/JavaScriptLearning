@@ -604,7 +604,6 @@ for (let i = 2; i <15; i++) {
 }
 console.log(values);
 
-console.clear();
 // Assignment 31
 // For a given array fruits perform below operations as:
 const fruits_seasonal = ["Banana", "Orange", "Apple", "Mango", "Water Melon"];
@@ -837,7 +836,6 @@ for (const key in sbi_details) {
     console.log(key,'==>',element);
 }
 
-console.clear();
 // Assignment 36
 console.log(`1. Define a class for Vehicle which should contains.
 ● Properties or attributes or data members:   ● Constructor
@@ -954,7 +952,6 @@ function reverseWord2(string) {
 }
 reverseWord2("Codemind Technology")
 
-console.clear();
 // Assignment 38: 07_ObjectCloneAssign.js, Please log output on console with step number and meaningful message
 const arrayNums = [ 20, 3, 4, 56, 90, 400, 49 ]
 console.log(`Given a array →  arrayNums : `,arrayNums);
@@ -974,6 +971,130 @@ console.log(`deep_clone`, deep_clone); //unchanged
 let arrayEvn = [ 2, 30, 14, 8]
 let mergedArray = [...arrayNums,...arrayEvn]
 console.log(`arrayNums`,arrayNums,`\narrayEvn`, arrayEvn,`\nmergedArray`,mergedArray);
+
+console.log(`Create the employee_info object as shown in snippet→`);
+const employee_info ={
+    emp_id :27,
+    emp_name : "John Doe",
+    salary: {
+        july_month:"40,000INR",
+        aug_month:"50,000INR",
+        jun_month:"65,000INR"
+    },
+    address:{
+        locality:{
+            colony: "OM Vrindavan Society",
+            street:"Kanch Pokli,431202",
+        },
+        city:"Mumbai",
+        state:"Maharashtra",
+        country:"India"
+    },
+    mobiles : ["+91 8600 3456 88", "1800- 4567 32", "+91- 9096 5678 77"]
+}
+console.log(`employee_info`,employee_info);
+console.log(`5. Log the employee details on console like
+a. Address: Locality, city, state and country b. Mobile numbers`);
+console.log(`a. Address :Locality ==> `);
+for (const key in employee_info.address.locality) {
+        const element = employee_info.address.locality[key];
+        console.log(element);
+}
+console.log(employee_info.address.city,employee_info.address.state,employee_info.address.country );
+for (const key in employee_info.address) {
+    const element = employee_info.address[key];
+    console.log(element);
+}
+
+console.log(`mobile no==>`, employee_info.mobiles[0] , employee_info.mobiles[1],employee_info.mobiles[2]);
+for (const i of employee_info.mobiles) {
+    console.log(i);
+}
+
+console.log(`6. Perform deep copy using JSON.stringfy( )`);
+let deep_copy = JSON.parse(JSON.stringify(employee_info));
+console.log(`a. Update property ‘july_month’ salary to 80K on cloned object`);
+deep_copy.salary.july_month = "80k";
+console.log(`b. Update property ‘country’ to ‘United Kingdom’ On original object`);
+employee_info.address.country = "United Kingdom";
+console.log(`c. Log - Updated values for original & cloned object on console`);
+console.log(`employee_info`,employee_info , `.salary.july_month`,employee_info.salary.july_month, `country`,employee_info.address.country);
+console.log(`deep_copy`,deep_copy, `.salary.july_month`, deep_copy.salary.july_month  , `country`, deep_copy.address.country );
+
+// Assignment 40: 07_ObjectMergeAssign2.js
+ console.log(`Given a object car and carEngine merge or concat these two objects using
+ 1. Object.assign() 2. Spread operator …`);
+// Note: ● Log the step 1 merged object details with meaning message // ● Log the step 2 merged object details
+const car = {
+  carName: "Creta SX",
+  company: "Hundai",
+  launchYear: 2017,
+};
+
+const carEngine = {
+  enginePower: "1499CC",
+  maxPower: "113 BHP",
+};
+let object_assign = Object.assign({},car,carEngine)
+console.log(`object_assign`, object_assign);
+for (const key in object_assign) {
+        const element = object_assign[key];    
+    console.log(key , element);
+}
+
+let spread_operator  = {...car, ...carEngine}
+console.log(`spread_operator`, spread_operator);
+for (const key in spread_operator) {
+    const element = spread_operator[key];    
+console.log(key , element);
+}
+
+console.clear();
+// Assignment 44: Array Of Objects, 08_arrayObjectAssignmnet.js
+// Create a class ‘Bank’ with all possible data members in such as way that all properties
+// should be initialized using constructor.
+// A. Data members: bank_name, location, account_no, ifsc, interest_rate
+class Bank {
+    bank_name; location; account_no; ifsc; interest_rate;
+    constructor(bank_name, location, account_no, ifsc, interest_rate){
+        this.bank_name=bank_name, 
+        this.location = location,
+        this.account_no= account_no, 
+        this.ifsc = ifsc, 
+        this.interest_rate = interest_rate
+    }
+}
+// B. Create objects - axis_bank, sbi_bank, icici_bank, kotak_bank, hdfc_bank, panjab_bank
+let axis_bank= new Bank("Axis_bank","Pune","1","ifscAxis","7%")
+let sbi_bank = new Bank("sbi","Pune","2","ifscsbi","8%")
+let icici_bank= new Bank("icici","Pune","3","icici","9%")
+let kotak_bank = new Bank("Kotak bank","Punekotak","4","kotak","9.%")
+
+// C. Add all object elements in a array and Traverse this array using for of loop 
+// then just log on console - Bank name and Location
+let arrayOfBanks =[axis_bank, sbi_bank, icici_bank, kotak_bank]
+for (const i of arrayOfBanks) {
+    console.log(i);
+}
+for (const i of arrayOfBanks) {
+    console.log(`Bank name ==> ${i.bank_name} and Location==> ${i.location}`);
+}
+// D. From the array(Step C) find the object which has name → Kotak bank using for of loop
+for (const i of arrayOfBanks) {
+    if (i.bank_name === "Kotak bank") {
+        console.log(`Kotak bank ==>`,i);
+    }
+}
+
+// E. Log the details on console using for loop of array
+
+for (let i = 0; i < arrayOfBanks.length; i++) {
+    const element = arrayOfBanks[i];
+    console.log(element);
+    console.log(element.bank_name , element.account_no);
+    
+}
+
 
 
 
