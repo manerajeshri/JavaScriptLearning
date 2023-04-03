@@ -789,21 +789,191 @@ let sbiBank = {
 sbiBank.showDetails();
 // console.log(`${sbiBank.showDetails()}`); // log when using return
 
-console.clear();
-
 // Assignment 35 → Object cloning and Traversing
-// 1. Create the object → ‘bank_sbi’ using literals with at least 4 properties
-// 2. Create the object → ‘bank_location’ using literals with properties: street, city, pin_code
-// 3. Clone the step 1 ( bank_sbi ) and step 2 ( bank_location ) objects using
-// ○ Object.assign( )
-// ○ Spread Operator
-// Note: Log the cloned object details on console with meaning message using strings
-// template
-// 4. Create the object using literals → rate_of_interest with properties
-// ○ home_loan_interest, personal_loan_interest, due_interest
-// 5. Merge the step 1, step 2 and step 4 objects into new object namely → sbi_details
-// Log all the properties that ‘sbi_details’ got after merging with meaning message
-// 6. Traverse this merged object - step 5 using loop
+console.log(`1. Create the object → ‘bank_sbi’ using literals with at least 4 properties`);
+let bank_sbi= {
+bankName : "SBI Bank",
+ifsc : "IFSCSBI77",
+branch : "PUNE",
+interestRate : "7%"
+}
+console.log(`bank_sbi`,bank_sbi);
+console.log(`// 2. Create the object → ‘bank_location’ using literals with properties: street, city, pin_code`);
+let bank_location ={
+    street : "punawale street",
+     city : "Pune",
+      pin_code :"411033"
+}
+// 3. Clone the step 1 ( bank_sbi ) and step 2 ( bank_location ) objects using Object.assign( ) & Spread Operator
+// Note: Log the cloned object details on console with meaning message using strings template
+let objectassign_bank = Object.assign({},bank_sbi )
+let objectassign_location = Object.assign({},bank_location )
+console.log(`objectassign_bank : `, objectassign_bank ,`\n objectassign_location `, objectassign_location);
+
+let spreadOperator_bank = {...bank_sbi}
+console.log(`spreadOperator_bank`, spreadOperator_bank);
+let spreadOperator_location = {...bank_location}
+console.log(`spreadOperator_location`, spreadOperator_location);
+
+console.log(`// 4. Create the object using literals → rate_of_interest with properties`);
+let rate_of_interest = {
+    home_loan_interest : "10%",
+    personal_loan_interest : "11%",
+    due_interest : "12%"
+}
+
+console.log(`// 5. Merge the step 1, step 2 and step 4 objects into new object namely → sbi_details
+ Log all the properties that ‘sbi_details’ got after merging with meaning message`);
+
+// let sbi_details = Object.assign({},bank_sbi,bank_location,rate_of_interest) // using object Assign
+let sbi_details = {...bank_sbi,...bank_location,...rate_of_interest} // using spread operator
+console.log(`sbi_details`,sbi_details);
+console.log(sbi_details.bankName, sbi_details.branch, sbi_details.ifsc, sbi_details.pin_code, sbi_details.home_loan_interest);
+
+console.log(` 6. Traverse this merged object - step 5 using loop`);
+
+for (const key in sbi_details) {
+    const element = sbi_details[key];
+    console.log(key,'==>',element);
+}
+
+console.clear();
+// Assignment 36
+console.log(`1. Define a class for Vehicle which should contains.
+● Properties or attributes or data members:   ● Constructor
+Create 5 objects from Vehicle class and log on console`);
+
+class Vehicle {
+    wheels; color ; fuel ; year
+    constructor(wheels, color , fuel , year){
+this.wheels = wheels,
+this.color = color,
+this.fuel = fuel,
+this.year= year
+    }
+}
+
+let maestro = new Vehicle("2 Wheelar", "Silver", "Petrol", "2013");
+let i10     = new Vehicle("4 Wheelar", "Blue" , "Petrol","2020")
+
+console.log(`maestro ==>`, maestro);
+console.log(`i10`, i10, `\nchecking is object belongs to class ==> i10 instanceof Vehicle==>`, i10 instanceof Vehicle); // checking object belongs to class or not
+console.log(`checking is property exist in object == "fuel" in maestro ==>`,"fuel" in maestro); // true checking property exist in object 
+
+// 2. Define a class for College which must contain
+// ● Properties or attributes or data members:
+// ● Constructor
+// ● Member function to log the details of college
+// Create 4 objects from College class and invoke the method to log details for each object
+class College {
+    collegeName;
+    city;
+    constructor(collegeName , city){
+        this.collegeName=collegeName,
+        this.city=city
+    };
+    details(){
+console.log(`College Details : Name==> ${this.collegeName} city==> ${this.city}`)
+    };
+    traverseObject(object){
+        for (const key in object) {
+                const element = object[key];
+                console.log(`${key} ${element}`)          
+        }
+    }
+}
+
+let kbp = new College("KBP","Satara");
+kbp.details();
+let rit =new College("RIT", "Islampur")
+rit.details();
+
+console.log(`3. Write a function → traverseObject() with one arg. such that it should traverse the complete given
+// object using for in loop and log the output `);
+// 3.1 Call this traverseObject() function by passing one by one object of College class
+kbp.traverseObject(kbp)
+rit.traverseObject(rit)
+
+// Assignment 37  Object, Array Freeze and merge
+console.log(`1. Create an object using literals namely→ personalDetails with your actual detail.`);
+let personalDetail ={
+    name: "Rajeshri",
+    age : 34
+}
+console.log(`personalDetail`, personalDetail);
+console.log(`2. Create an object using literals → collegeDetails with your college details`);
+let collegeDetails ={
+    college : "RIT",
+    university : "Autonomous"
+}
+console.log(`collegeDetails`,collegeDetails);
+console.log(`3. Merge these two objects and log details on console with meaning message.`);
+let mergedDetails = {...personalDetail, ...collegeDetails}
+console.log(`mergedDetails`,mergedDetails);
+
+console.log(`4. Create an array of your friend names and freeze it.`);
+let friendsArray= ["a","b","c"]
+Object.freeze(friendsArray)
+friendsArray[0]="A"  // cant bz its freezed
+console.log(`friendsArray`,friendsArray); //friendsArray (3) ['a', 'b', 'c']
+
+console.log(`5. Iterate step 4 array using for of loop and log friend names on console`);
+for (const i of friendsArray) {
+    console.log(i);
+}
+
+console.log(`6. Given a string company = “Codemind Technology”;
+ a. Write a code to reverse only → Technology word
+ b. Expected output → “Codemind ygolonhceT” `);
+
+function reverseWord(string) {
+    let resultSplit = string.split(" ")
+    console.log(`Method 1 Output==>`, resultSplit[0].concat(" ",resultSplit[1].split("").reverse().join("")));
+}
+reverseWord("Codemind Technology")
+
+function reverseWord1(string) {
+    let resultSplit = string.split(" ")
+    let reverse = []
+    for (const i of resultSplit[1]) { // for of
+        reverse.unshift(i)
+    }
+    console.log(`Method 2 Output==>`,resultSplit[0] + " " + reverse.join(""));
+}
+reverseWord1("Codemind Technology")
+
+function reverseWord2(string) {
+    let resultSplit = string.split(" ")
+    let secondWord = resultSplit[1]
+    let reverse = []
+    for (let i = 0; i < secondWord.length; i++) {
+        reverse.unshift(secondWord.charAt(i))
+        
+    }
+    console.log(`Method 3 Output==>`,resultSplit[0] + " " + reverse.join(""));
+}
+reverseWord2("Codemind Technology")
+
+console.clear();
+// Assignment 38: 07_ObjectCloneAssign.js, Please log output on console with step number and meaningful message
+const arrayNums = [ 20, 3, 4, 56, 90, 400, 49 ]
+console.log(`Given a array →  arrayNums : `,arrayNums);
+// 1. Perform shallow clone on arrayNums, Update cloned array with values → 55, 66 using push () and log original and cloned array on console
+let shallow_clone =  arrayNums;
+shallow_clone.push(55,66)
+console.log(`Given a array →  arrayNums : `,arrayNums);
+console.log(`shallow_clone`,shallow_clone);
+// 2. Perform deep clone using spread operator, Update original array i.e arrayNums with values 10, 25 at last position and log original and cloned array
+// on console
+let deep_clone = [...arrayNums];
+arrayNums.push(10,25)
+console.log(`Given a array →  arrayNums : `,arrayNums); // changes
+console.log(`deep_clone`, deep_clone); //unchanged
+// 3. Given other array → arrayEven = [ 2, 30, 14, 8], Merge or concat this array with ‘arrayNums’ using spread operator, log result on console after merge
+// array operation
+let arrayEvn = [ 2, 30, 14, 8]
+let mergedArray = [...arrayNums,...arrayEvn]
+console.log(`arrayNums`,arrayNums,`\narrayEvn`, arrayEvn,`\nmergedArray`,mergedArray);
 
 
 
