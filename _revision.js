@@ -1049,7 +1049,7 @@ for (const key in spread_operator) {
 console.log(key , element);
 }
 
-console.clear();
+
 // Assignment 44: Array Of Objects, 08_arrayObjectAssignmnet.js
 // Create a class ‘Bank’ with all possible data members in such as way that all properties
 // should be initialized using constructor.
@@ -1095,7 +1095,71 @@ for (let i = 0; i < arrayOfBanks.length; i++) {
     
 }
 
+console.clear();
 
+// Assignment 45: Set and Map hands on for objects
+// Create a class ‘Bank’ with all possible data members in such a way that all properties should
+// be initialized using constructor.
+// A. Data members: bank_name, location, account_no, ifsc, interest_rate
+class Bankk {
+    bank_name; location; account_no; ifsc; interest_rate;
+    constructor(bank_name, location, account_no, ifsc, interest_rate){
+this.bank_name,
+this.location, 
+this.account_no, 
+this.ifsc, 
+this.interest_rate
+    }
+}
 
+// B. Create objects - axis_bank, sbi_bank, icici_bank, kotak_bank, hdfc_bank, panjab_bank
+let axisbank= new Bank("Axis_bank","Pune","1","ifscAxis","7%")
+let sbibank = new Bank("sbi","Pune","2","ifscsbi","8%")
+let icicibank= new Bank("icici","Pune","3","iciciifsc","9%")
+let kotakbank = new Bank("Kotak bank","Punekotak","4","kotakifsc","9.%")
 
+// 1. Add all object elements in a array and just log on console - Bank name and Location
+let bankArray = [axisbank,sbibank,icicibank,kotakbank]
+for (const i of bankArray) {
+    console.log(`Bank name ${i.bank_name} and Location ${i.location}`);
+}
 
+// 2. Add all object elements in a Set and traverse using for of loop and log on console just
+// Bank name with it’s IFSC code
+
+let setOfBanks = new Set();
+setOfBanks.add(axisbank);
+setOfBanks.add(sbibank);
+setOfBanks.add(icicibank);
+setOfBanks.add(kotakbank);
+console.log(`set`,setOfBanks);
+// console.log(`set`,...setOfBanks);
+
+for (const i of setOfBanks) {
+    // console.log(i);
+    console.log(`Bank name ${i.bank_name} IFSC code ${i.ifsc}`);
+}
+
+// 3. Create a Map in such way that key should be account_number and value is object that
+// is created in step B. Traverse the map and log on console all object details
+
+let mapOfBank = new Map();
+mapOfBank.set(1,axisbank)
+mapOfBank.set(2,sbibank)
+mapOfBank.set(3,icicibank)
+mapOfBank.set(4,kotakbank)
+
+console.log(`mapOfBank mapOfBank.keys() == >`, mapOfBank.keys());
+
+for (const i of mapOfBank.keys()) {
+    console.log(`i`,i);
+    console.log(mapOfBank.get(i));
+}
+
+// 4. From the array(Step A) find the object which has name → Kotak bank
+
+for (const i of bankArray) {
+    if (i.bank_name == "Kotak bank") {
+        console.log(`found  Kotak bank ==> ${i.bank_name} ${i.ifsc}`);
+    }
+}

@@ -17,7 +17,8 @@ setNumbers.add(1); // Adding duplicate element - 1
 setNumbers.add(3);// Adding duplicate element - 3
 setNumbers.add(5);
 setNumbers.add(6);
-console.log(setNumbers);
+console.log(setNumbers); // Set(6) {size: 6, 0, 1, 3, 4, 5, …}
+console.log(...setNumbers); // 0 1 3 4 5 6
 
 
 console.log(`Total available elements in Set`);
@@ -48,10 +49,10 @@ for (const element of setNumbers) {
 
 console.log(`Removing duplicate elements`);
 let arrayOfNumbers = [5, 6, 4, 6, 5, 5, 6];
-// const mySet = new Set(arrayOfNumbers);
-// console.log(mySet);
+const mySet = new Set(arrayOfNumbers);
+console.log(mySet); // Set(3) {size: 3, 5, 6, 4}
 // const myArray = [...mySet];
-// console.log(myArray);
+// console.log(myArray); // (3) [5, 6, 4]
 
 const myArray = [...new Set(arrayOfNumbers)];
 console.log(myArray);
@@ -81,3 +82,9 @@ class Employee {
   setOfEmployees.add(empDhir);
   setOfEmployees.add(empSachin);
   setOfEmployees.add(empGayatri);
+
+  console.log(`setOfEmployees`,setOfEmployees);
+  for (const iterator of setOfEmployees) {
+    console.log(iterator);
+    console.log(iterator.empId , iterator.empName);
+  }
