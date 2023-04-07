@@ -1188,7 +1188,6 @@ add5(100, 100, 200, 349, 756)
 // c. Invoke the same arrow function for values: “I am”, “learning”, “ ES6”, ‘ features’, “ in depth”
 add5("I am", " learning", " ES6", " features", " in depth")
 
-console.clear();
 // Assignment 47
 // Note: Please create the Employee class as it →
 // - While creating objects pass the values as it is →
@@ -1250,8 +1249,51 @@ for (const i of arrayOfEmp) {
     }
 }
 
+console.clear();
+// Assignment 48: Using forEach( ) with arrow function and callback
+const array_numbers = [ 1, -7, 40, 502, -77, 91, 0, 108, 89, -601 ];
+// From the given array_numbers, try the hands-on for
+// 1. Log the array element with it’s index using forEach( ) with arrow function
+array_numbers.forEach((currentValue,index,array)=>{
+console.log(`array element ${currentValue} it’s index ${index}`);
+})
+// 2. Find the positive numbers and log on console // a. Using forEach( ) with arrow function
+array_numbers.forEach((element)=>{
+    if (element>=0) {
+        console.log(`positive number ${element}`);
+    }
+})
 
+// 3. Find the negative numbers, add into new array and and log new array on console using arrow
+// function
+let negativeArray = []
+console.log(`array_numbers`, array_numbers);
+array_numbers.forEach((element)=>{
+    if (element<0) {
+        // console.log(`negative number ${element}`);
+        negativeArray.push(element)
+    }
+})
+console.log(`negativeArray`, negativeArray);
 
+// 4. Find the even numbers and log on console using forEach( ) with arrow function
+array_numbers.forEach((element)=>{
+    if (element%2===0) {
+        console.log(`even no`, element);
+    }
+})
+// 5. Find the sum of all elements from array_numbers and log on sum value on console.
+let summ = 0;
+array_numbers.forEach((element)=>{
+    sum = sum + element
+})
+console.log(`sum =`, sum);
+// 6. Log the only even positioned array value on console. forEach( ) with arrow function prefered
+array_numbers.forEach((element, index)=>{
+    if (index%2===0) {
+        console.log(`even positioned`,element);
+    }
+})
 
 
 
