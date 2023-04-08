@@ -1249,7 +1249,7 @@ for (const i of arrayOfEmp) {
     }
 }
 
-console.clear();
+// console.clear();
 // Assignment 48: Using forEach( ) with arrow function and callback
 const array_numbers = [ 1, -7, 40, 502, -77, 91, 0, 108, 89, -601 ];
 // From the given array_numbers, try the hands-on for
@@ -1295,8 +1295,39 @@ array_numbers.forEach((element, index)=>{
     }
 })
 
-
-
+console.clear();
+// Assignment 49: Use only forEach( ) // Create new file pls
+// For the given employee objects refering line no 1214
+arrayOfEmp = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,enp_mahi];// creating array of object
+// 1. Find out the ‘TCS’ employee details and log only name & company on console
+arrayOfEmp.forEach((employeeObject)=>{
+    if (employeeObject.emp_company === "TCS") {
+        console.log(`name  ${employeeObject.emp_name} & company ${employeeObject.emp_company}`);
+    }
+})
+// 2. Find the employees with salary greater than or equal 50000 ( Log the all employee details on console )
+arrayOfEmp.forEach((empObj)=>{
+    if (empObj.emp_salary >=50000) {
+        console.log(`employee details`,empObj);
+    }
+})
+// 3. Find the sum of all employees salary and log on console
+let salsum=0;
+arrayOfEmp.forEach((empObj)=>{
+    salsum =salsum + empObj.emp_salary
+})
+console.log(`salsum`,salsum);
+// 4. Find the average salary and log on console (Average = Total Salary / Number of employees)
+console.log(`Average salary = ${salsum / arrayOfEmp.length}`);
+// 5. Find the ‘IT’ OR ‘HR’ department employees whose salary is greater than or equal to 75000 and log complete employee details on console
+arrayOfEmp.forEach((empobj)=>{
+    if ((empobj.emp_dept === 'IT' || empobj.emp_dept ==='HR')&& empobj.emp_salary>= 75000) {
+        console.log(empobj);
+        for (const key in empobj) {
+            console.log(key +  " : " + empobj[key]);
+        }
+    }
+})
 
 
 
