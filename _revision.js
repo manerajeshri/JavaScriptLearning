@@ -1295,7 +1295,7 @@ array_numbers.forEach((element, index)=>{
     }
 })
 
-console.clear();
+
 // Assignment 49: Use only forEach( ) // Create new file pls
 // For the given employee objects refering line no 1214
 arrayOfEmp = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,enp_mahi];// creating array of object
@@ -1358,7 +1358,7 @@ map.forEach((key,value)=>{
 console.log(`key,value== > `, key,value);
 })
 
-console.clear();
+
 // Assignment 50: Create new file pls For the given Employee class, objects are created as shown in snippet
 // Create a Map Collection with name ‘map_employees’ and entries in such a way that employee id is the key and
 // value is the employee object Ex. map_employees.set(22, emp_anil);In this way add all entries
@@ -1382,3 +1382,52 @@ map_employees.forEach((key, value)=>{
         console.log(i,key[i]);
     }
 })
+
+
+// Assignment 51: map( )
+const array_number = [ 20, 11, 40, 25, 23, 11, 9, 31, 60, 2, 19 ];
+// For the given array Perform the below operations as
+// 1. Add 10 into each element and log new array result on console using map( )
+let new_array_number = array_number.map((element,index,array)=>{
+return element + 10;
+})
+console.log(`array_number`, array_number);
+console.log(`new_array_number`, new_array_number);
+// 2. Square the each array element and log on console
+let square_array_number = array_number.map((element)=>{
+    return element * element
+})
+console.log(`square_array_number`, square_array_number);
+// 3. Add the index value into its corresponding each array element and log new array result on console
+let add_index_aray = array_number.map((element,index)=>{
+    return element + index
+})
+console.log(`add_index_aray`,add_index_aray);
+
+// Assignment 52 : map( )
+// Add the all employee objects inside array
+arrayOfEmp = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,enp_mahi];// creating array of object
+// 1. Get the list of all employee names &  log new array on console.
+let employee_names = arrayOfEmp.map((element)=>{
+return element.emp_name
+})
+console.log(`employee_names`, employee_names);
+// 2. Get the list of departments & log on  console
+let departments = arrayOfEmp.map((element)=>{
+    return element.emp_dept
+    })
+    console.log(`departments`,departments);
+// 3. Get the list of employee id’s and log on console
+let employee_ids = arrayOfEmp.map((element)=>{
+    return element.emp_id
+    })
+console.log(`employee_ids`,employee_ids);
+
+
+console.clear();
+
+
+
+
+
+
