@@ -1329,8 +1329,56 @@ arrayOfEmp.forEach((empobj)=>{
     }
 })
 
+//  forEach() on SET
 
+const setofNum = new Set()
+setofNum.add(60); setofNum.add(70);setofNum.add(80);
+setofNum.add(20);setofNum.add(30);setofNum.add(40);
 
+setofNum.forEach((currentValue, index,set)=>{
+console.log(`currentValue, index,set ==>`,`currentValue ==>`,currentValue,`index==>`, index,`set==>`,set);
+})
 
+setofNum.forEach((currentValue)=>{
+    console.log(`currentValue ==>`,currentValue);
+})
 
+// forEach() ==> MAP
+console.log(`\nforEach() with callback ==> MAP`);
+const map =new Map;
+map.set(11, "Anil"); map.set(22, "Sunil");
+map.set(33, "Radha"); map.set(44, "Rani")
+// forEach with callback
+map.forEach(function(key,value){
+    console.log(`key,value ==>`,key,value);
+})
 
+console.log(`\nforEach() with arrowfunction ==> MAP`);
+map.forEach((key,value)=>{
+console.log(`key,value== > `, key,value);
+})
+
+console.clear();
+// Assignment 50: Create new file pls For the given Employee class, objects are created as shown in snippet
+// Create a Map Collection with name ‘map_employees’ and entries in such a way that employee id is the key and
+// value is the employee object Ex. map_employees.set(22, emp_anil);In this way add all entries
+let map_employees = new Map;
+map_employees.set(22,emp_anil)
+map_employees.set(33,emp_radha)
+map_employees.set(55, emp_rishi)
+map_employees.set(66,emp_sonali)
+map_employees.set(77,emp_monika)
+map_employees.set(88,emp_viny)
+map_employees.set(99,enp_mahi)
+    
+// Log the details in format  Emp id ===> Name: emp_name , Dept: emp_dept, Company: emp_company, Salary: emp_salary
+// Please traverse using forEach() loop
+// Example:  22 ===> Name: Anil, Dept: IT, Company: TCS, Salary: 50000
+
+map_employees.forEach((key, value)=>{
+    console.log(key, value);
+    console.log(`Emp id ${value} ===> Name: ${key.emp_name} , Dept: ${key.emp_dept}, Company: ${key.emp_company}, Salary: ${key.emp_salary}`);
+    for (const i in key) {
+        console.log(i,key[i]);
+    }
+})
