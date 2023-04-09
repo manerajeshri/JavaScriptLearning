@@ -1452,7 +1452,7 @@ let between20and50 = arrayNumberss.filter((element)=>{
 })
 console.log(`between20and50`, between20and50);
 
-console.clear();
+
 // Assignment:54 filter( )
 // Add the all employee objects inside array
 arrayOfEmp = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,enp_mahi];// creating array of object
@@ -1474,6 +1474,132 @@ for (const iterator of arrayTCS) {
     // console.log(iterator);
     console.log(`Company name ${iterator.emp_company} & Employee name ${iterator.emp_name}.`);
 }
+
+// Assignment 55 - for reduce( ) method
+const array_numberss = [20, 11, 40, 25, 37, 49, 9, 90, 60, 2, 19];
+// 1. Find the sum of all numbers
+let summm = array_numberss.reduce((runningTotal, element)=>{
+  console.log(runningTotal, element);
+  return runningTotal+ element
+})
+console.log(`summm = `,summm);
+// 2. Find the sum of all even numbers [ Hint → filter first then use reduce( ) ]
+let even_numbers =  array_numberss.filter((element)=>{
+    console.log(element);
+    return element%2===0
+})
+console.log(`even_numbers`, even_numbers);
+let sum_even_numbers= even_numbers.reduce((currentValue,value)=>  currentValue + value);
+console.log(`sum_even_numbers`, sum_even_numbers);
+
+console.log(`optimized == > using chaining`);
+// let chaining_sum_even= array_numberss.filter((element)=>{
+// return element%2==0;
+// }).reduce((currentValue,values)=>{
+//     return currentValue+values
+// })
+
+// more optimised
+let chaining_sum_even= array_numberss.filter(element=>element%2==0 ).reduce((currentValue,values)=> currentValue+values)
+console.log(`chaining_sum_even`, chaining_sum_even);
+
+// Find the average using reduce( )
+const arrayy_numbers = [20,11,40,25,23,11,9,90,60,2,19];
+let totalsum =0;
+let sum_arrayy_numbers = arrayy_numbers.reduce((runningTotal,values)=>{
+
+    return totalsum = runningTotal+values
+})
+console.log(`avg_arrayy_numbers`,sum_arrayy_numbers/arrayy_numbers.length);
+
+
+// Assignment 56 - Using filter( ) and reduce( )
+// Given the Employee class Add all employee object inside array namely ‘array_emps’
+array_emps = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,enp_mahi];// creating array of object
+// 1. Find all the employees from ‘Wipro’ company
+let employees_from_Wipro = array_emps.filter((element)=>{
+return element.emp_company === "Wipro"
+})
+console.log(`employees_from_Wipro`, employees_from_Wipro);
+employees_from_Wipro.forEach((element,)=>{
+console.log(element);
+for (const key in element) {
+    console.log(key , element[key]);
+    }
+})
+//2. Find all the employees from ‘IT’ OR ‘HR’ dept
+let empItHr = array_emps.filter((element)=>{
+    return element.emp_dept=== "IT" ||  element.emp_dept=== "HR"
+})
+console.log(`empItHr`, empItHr);
+
+empItHr.forEach((element)=>{
+    console.log(element);
+    for (const key in element) {
+        console.log(key,element[key] );
+     }
+})
+
+//3. Find all the employees whose emp id’s are greater than 50
+let id50 = array_emps.filter((element)=>{
+    return element.emp_id>=50
+})
+console.log(`id50`, id50);
+id50.forEach((element)=> console.log(element))
+
+//4. Find all the employees whose names start with letter ‘A’ or ‘V’ or ‘M’ [ Hint→ startsWith( “A”) || startsWith( “V”)
+// startsWith( “M”) inside if ( ) block as a condition ]
+let avm = array_emps.filter((element)=>{
+    return element.emp_name.startsWith("A") || element.emp_name.startsWith("V") || element.emp_name.startsWith("M")
+})
+console.log(`avm`, avm);
+avm.forEach((element)=>{
+    console.log(element.emp_name ,element.emp_company , );
+})
+
+// 5. Find the average salary of the employee for all the department
+let sal =[]
+ array_emps.filter((element)=>{
+     sal.push(element.emp_salary)
+})
+console.log(sal);
+let suum= sal.reduce((runningTotal,values)=>{
+    return runningTotal + values
+},0)
+console.log(`sum =`, suum, `avg sal = `, suum/ array_emps.length);
+
+// 6. Find the average salary for ‘IT’ department [ Hint → Filter the ‘IT’ department employee using filter( ) which
+// return new array with only ‘IT’ department employees and then use reduce( ) to get the average ]
+
+let arrayofIT = array_emps.filter((element)=>{
+    if (element.emp_dept === "IT") {
+        return element.emp_salary
+    }
+
+})
+console.log(`arrayofIT`,arrayofIT);
+let sall =[]
+arrayofIT.forEach((element)=>{
+sall.push(element.emp_salary)
+})
+
+let totalSal = sall.reduce((rt,v)=>{
+    return rt+v
+})
+console.log(`totalSal = `, totalSal, `avg sal = `,  totalSal/array_emps.lengthv);
+
+console.clear();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
