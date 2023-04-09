@@ -1588,7 +1588,71 @@ let totalSal = sall.reduce((rt,v)=>{
 })
 console.log(`totalSal = `, totalSal, `avg sal = `,  totalSal/array_emps.lengthv);
 
+// Assignment 57: Sorting in Ascending / Descending order and reverse
+const array_roll_numbers = [113, 45, 56, 11, 32, 45, 109, 799, 56, 45 ]
+console.log(`Given array `, array_roll_numbers);
+// 1. Reverse the array
+let reverse_array = array_roll_numbers.reverse()
+console.log(`reverse_array  `, reverse_array);
+// 2. Use the sort() method as it is without any custom sorting logic 
+// (Without passing any arguments) & notice the issue
+console.log(`sort() as it is`, array_roll_numbers.sort());
+// 3. Sort the array in ascending order, by writing your custom logic
+console.log(`Sort the array in ascending order, by writing your custom logic`);
+let ascending_array = array_roll_numbers.sort((a,b)=>{
+    return a>b? 1 :-1
+})
+console.log(`ascending_array`, ascending_array);
+let descending_array = ascending_array.reverse();
+console.log(`descending_array`, descending_array);
+
+// 4. Find the Greatest number from the array
+console.log(`Greatest number from the array :`,ascending_array[0] );
+// 5. Find the smallest number from the array
+console.log(`smallest number from the array :`,ascending_array[ascending_array.length-1]);
+// 6. Remove duplicates from array
+let newArray = [...new Set(array_roll_numbers)]
+console.log(`Remove duplicates from array :`, newArray);
+
 console.clear();
+// Assignment 58: Sorting in ascending & Descending
+// For the given Employee class objects are Created please add all them in array. namely ‘array_employees’
+let array_employees = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,enp_mahi];// creating array of object
+// Try the below:
+// 1. Sort the ‘array_employees’ in ascending order of Employee Id’s and log employee details → Id, Name, Department
+
+let ascending_order = array_employees.sort((a,b)=>{
+    return a.emp_id > b.emp_id ? 1 :-1
+})
+console.log(`ascending_order`,ascending_order);
+ascending_order.forEach((element)=>{
+    console.log(`employee details → Id : ${element.emp_id}, Name : ${element.emp_name}, Department : ${element.emp_dept}`);
+})
+
+// 2. Sort the ‘array_employees’ in ascending order of employee department & log Id, dept, & Company
+let employee_department = array_employees.sort((a,b)=>{
+    return a.emp_dept > b.emp_dept ? 1:-1
+})
+console.log(employee_department);
+
+employee_department.forEach((element)=>{
+    console.log(`log Id ${element.emp_id}, dept ${element.emp_dept}, & Company ${element.emp_company}`);
+})
+
+// 3. Sort the employee array in descending order of employee salary and log Name, Salary & Company
+let descending_order = array_employees.sort((a,b)=>{
+return a.emp_salary > b.emp_salary ? -1:1
+})
+descending_order.forEach((element)=>{
+    console.log(`Name ${element.emp_name}, Salary ${element.emp_salary} & Company ${element.emp_company}`);
+})
+
+
+
+
+
+
+
 
 
 
