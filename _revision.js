@@ -1423,8 +1423,57 @@ let employee_ids = arrayOfEmp.map((element)=>{
     })
 console.log(`employee_ids`,employee_ids);
 
+// Assignment 53 - for filter( ) method
+const arrayNumberss = [20, 11, 40, 25, 37, 49, 9, 90, 60, 2, 19];
+console.log(`arrayNumberss`,arrayNumberss);
+// 1. Find out all the numbers which are greater than 50 and log on console
+let greater_than_50 = arrayNumberss.filter((element)=>{
+    return element>50
+})
+console.log(`greater_than_50`, greater_than_50);
+// 2. Find out all the even number and log on console
+let even_number = arrayNumberss.filter((element)=>{
+    return element%2==0
+})
+console.log(`even_number`, even_number);
+// 3. Find out all the odd numbers and log on console
+let odd_numbers = arrayNumberss.filter((element)=>{
+    return element%2!==0
+})
+console.log(`odd_numbers`,odd_numbers);
+// 4. Find out all the numbers which are multiple of 5
+let multiple_of_5 = arrayNumberss.filter((element)=>{
+    return element%5==0
+})
+console.log(`multiple_of_5`, multiple_of_5);
+// 5. Find out all numbers which are between 20 and 50
+let between20and50 = arrayNumberss.filter((element)=>{
+    return 20<element && element<50
+})
+console.log(`between20and50`, between20and50);
 
 console.clear();
+// Assignment:54 filter( )
+// Add the all employee objects inside array
+arrayOfEmp = [emp_anil,emp_radha,emp_rishi,emp_sonali,emp_monika,emp_viny,enp_mahi];// creating array of object
+console.log(`arrayOfEmp`, arrayOfEmp);
+// 1. Find out all the objects from ‘TCS’  using filter( ), 
+let arrayTCS = arrayOfEmp.filter((element)=>{
+    return element.emp_company === "TCS"
+})
+console.log(`arrayTCS`, arrayTCS);
+// and then from the Final array result log Company name & Employee name.
+console.log(`using foreach()`);
+arrayTCS.forEach((element)=>{
+    // console.log(element);
+    console.log(`Company name ${element.emp_company} & Employee name ${element.emp_name}.`);
+})
+
+console.log(`using for of`);
+for (const iterator of arrayTCS) {
+    // console.log(iterator);
+    console.log(`Company name ${iterator.emp_company} & Employee name ${iterator.emp_name}.`);
+}
 
 
 
