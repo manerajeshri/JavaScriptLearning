@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Session Storage</title>
+</head>
+<body>
+    <h3>Session Storage</h3>
+    <script>
+        console.log(`Session Storage`);
+        window.sessionStorage.setItem("firstName", " Aaradhya");
+        window.sessionStorage.setItem("LastNAme", " Deshmukh");
+        window.sessionStorage.setItem("age", " 2.8");
+        window.sessionStorage.setItem("no", 1);
+        window.sessionStorage.setItem("school", " Beamish");
+        console.log(`window.sessionStorage.length`, window.sessionStorage.length);
+        console.log(`getitem`);
+        console.log(window.sessionStorage.getItem("firstName"), `no` , window.sessionStorage.getItem("no"));
+        console.log(window.sessionStorage.key(3)); //no
+window.sessionStorage.removeItem("LastNAme")
+console.log(`window.sessionStorage.length`, window.sessionStorage.length);
+// window.sessionStorage.clear();
+console.log(window.sessionStorage.getItem("firstName"),  window.sessionStorage.getItem("no"));
+    
+    // local storage
+    console.log(`\n local storage`);
+    window.localStorage.setItem("city", "pune")
+    window.localStorage.setItem("pin", 411033)
+   // window.localStorage.key(0) will return the key present at given index number. 
+    //the index no are as per the Application ==> local storage ==> file
+    console.log(window.localStorage.key(0)); // pin 
+    console.log(`window.localStorage.length`,window.localStorage.length);
+    console.log(`window.localStorage.getItem("pin") ==== >`, window.localStorage.getItem("pin"));
+    window.localStorage.removeItem("city")
+    
+    
+    
+    </script>
+</body>
+</html>

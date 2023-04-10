@@ -1648,7 +1648,13 @@ descending_order.forEach((element)=>{
 })
 
 
-
+// Assignment 59 - Local Storage: Create a new file
+// In session storage add the data in format like
+// ● Key → name, value → Your Full Name
+// ● Key → city, value → Your City Name
+// ● Key → pinCode, value → Your Pin code
+// ● Key →district, value → Your District Name
+// Remove the item → city
 
 
 
