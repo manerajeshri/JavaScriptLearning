@@ -1656,6 +1656,31 @@ descending_order.forEach((element)=>{
 // ● Key →district, value → Your District Name
 // Remove the item → city
 
+console.clear()
+// hoisting
+console.log(hoisting);
+var hoisting 
+
+cityy = "pune"
+console.log(cityy);
+var cityy
+
+test()
+function test() {
+    console.log(`testing hoisting`);
+}
+
+
+test1(); // err
+var test1 = function () {
+    console.log(`testing hoisting`);
+}
+
+
+
+
+
+
 
 
 
