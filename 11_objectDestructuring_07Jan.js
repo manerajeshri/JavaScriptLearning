@@ -33,3 +33,7 @@ console.log("Self Invoking Function or IIFE - Immediately Invoked Function Expre
 (function show(){
     console.log("Bhar bhar ke likho");
 })();
+
+// (function name(params) {
+    
+// })()

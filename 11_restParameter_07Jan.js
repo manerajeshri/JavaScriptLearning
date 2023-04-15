@@ -2,7 +2,7 @@
 
 function show(name, age, ...details){
     console.log(name,age, details);
-    console.log(`Acessing single element from rest Parameter\ntotal senturies are : ${details[1]}`);
+    console.log(`Acessing single element from rest Parameter\ntotal centuries are : ${details[1]}`);
 }
 show("Sachin", 45, "Mumbai", 101);
 

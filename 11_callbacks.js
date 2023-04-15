@@ -28,20 +28,20 @@ function adMl() {
 adMl(ad(1,3),ml(5,6))
 // adMl()
 
-console.log("Callback with arg functions");
-let add = function (n1, n2){
-    console.log(n1+n2);
-}
-let multiply = function (n1, n2){
-    console.log(n1*n2);
-}
+// console.log("Callback with arg functions");
+// let add = function (n1, n2){
+//     console.log(n1+n2);
+// }
+// let multiply = function (n1, n2){
+//     console.log(n1*n2);
+// }
 
-function operation(callbackAdd, callbackMultiply) {
-    console.log('operation');
-    callbackAdd(5, 5);
-    callbackMultiply(2, 2);
-} 
-operation(add, multiply);
+// function operation(callbackAdd, callbackMultiply) {
+//     console.log('operation');
+//     callbackAdd(5, 5);
+//     callbackMultiply(2, 2);
+// } 
+// operation(add, multiply);
 
 
 
@@ -49,4 +49,4 @@ operation(add, multiply);
 function show() {
     console.log("\nHI setTimeout : inserts delay");
 }
-setTimeout(show,3000); // inserts delay
+// setTimeout(show,3000); // inserts delay

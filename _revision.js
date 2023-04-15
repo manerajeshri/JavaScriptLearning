@@ -1657,6 +1657,7 @@ descending_order.forEach((element)=>{
 // Remove the item → city
 
 console.clear()
+
 // hoisting
 console.log(hoisting);
 var hoisting 
@@ -1671,31 +1672,43 @@ function test() {
 }
 
 
-test1(); // err
-var test1 = function () {
-    console.log(`testing hoisting`);
+// test1(); // err
+// var test1 = function () {
+//     console.log(`testing hoisting`);
+// }
+
+console.clear();
+
+// first class citizen
+// 1 function can be stored in variable
+function msg() {
+    console.log(`HI.. 1 function can be stored in variable `);
 }
+let newvariable = msg
+newvariable();
 
+// 2. Function can be passed as an argument to another function
 
+function average() {
+    console.log(`average is 2.5`);
+}
+function additionFunction(name) {
+    console.log(`addition is 5`); 
+    console.log(`2. Function can be passed as an argument to another function`);
+    name();
+}
+additionFunction(average)
 
+// 3. A function can return another function
+console.log(`3. A function can return another function`);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function fname() {
+    console.log(`name is rajesri`);
+    return function lname() {
+        console.log(`last name is Mane Deshmukh`);
+    }
+}
+fname () () // invoking function
 
 
 

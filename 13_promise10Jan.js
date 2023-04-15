@@ -7,10 +7,10 @@ let promiseToShareNotes = new Promise(function(success, reject){
     }
 });
 promiseToShareNotes.then(function success(fulfilled){
-    console.log(fulfilled);
+    console.log(`fulfilled log comes from success : `,fulfilled);
 }).catch(function failure(rejected){
     console.log("Sir why have not shared notes.. ");
-    console.log(rejected);
+    console.log(`rejected`,rejected);
 }).finally(function () {
     console.log("===========================");
     console.log("I must have notes - Whether Sir will give or not");

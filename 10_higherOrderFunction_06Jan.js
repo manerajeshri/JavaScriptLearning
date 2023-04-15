@@ -11,3 +11,5 @@ function show(myNumber){ // myNumber is an argument
 }
  let inner = show(anotherFunction);
  inner();
+// or
+//  show(anotherFunction)();
